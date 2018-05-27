@@ -207,3 +207,4 @@ def get_secret(setting, secrets=secrets):
         raise ImproperlyConfigured("Set the {} setting".format(setting))
 
 QIITA_ACCESS_TOKEN = get_secret('QIITA_ACCESS_TOKEN')
+QIITA_USER_RANKING_URL = 'https://qiita-user-ranking.herokuapp.com/'

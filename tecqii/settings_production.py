@@ -10,3 +10,5 @@ DATABASES = {
        'PORT': '',
    }
 }
+
+PHANTOMJS_PATH = '/usr/bin/phantomjs'
