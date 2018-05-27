@@ -2,7 +2,7 @@
 
 import sys
 import time
-from datetime import date, timedelta, datetime, time
+from datetime import date, timedelta, datetime
 from qiita_v2.client import QiitaClient
 from qiita_v2.response import QiitaResponse
 from django.core.management.base import BaseCommand
@@ -28,6 +28,7 @@ class Command(BaseCommand):
             try:
                 response = client.get_user(id=user.user_id)
             except:
+                print(user.user_id)
                 print(sys.exc_info()[1])
             else:
                 response_json = response.to_json()
@@ -50,6 +51,5 @@ class Command(BaseCommand):
                         'website_url': response_json['website_url'],
                     }
                 )
-                print(response_json['id'])
         print('finished.')
 
