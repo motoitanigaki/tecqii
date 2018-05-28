@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d83b0ff0-a97e-4bd4-a5e0-f16611d415fd" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ghostdriver.log" afterPath="$PROJECT_DIR$/ghostdriver.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tecqii/crawler.py" afterPath="$PROJECT_DIR$/tecqii/crawler.py" />
     </list>
     <ignored path="tecqii.iws" />
@@ -95,26 +96,26 @@
           <file leaf-file-name="crawler.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/tecqii/crawler.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="645">
-                  <caret line="69" column="59" selection-start-line="69" selection-start-column="59" selection-end-line="69" selection-end-column="59" />
+                <state relative-caret-position="585">
+                  <caret line="65" column="30" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="30" />
                   <folding>
                     <element signature="e#0#9#0" expanded="true" />
                     <element signature="e#557#711#0" expanded="false" />
-                    <element signature="e#4238#4371#0" expanded="false" />
-                    <element signature="e#4481#4858#0" expanded="false" />
-                    <element signature="e#4968#5119#0" expanded="false" />
-                    <element signature="e#5232#5487#0" expanded="false" />
-                    <element signature="e#5600#5982#0" expanded="false" />
-                    <element signature="e#6098#6237#0" expanded="false" />
-                    <element signature="e#6346#6708#0" expanded="false" />
-                    <element signature="e#6818#7022#0" expanded="false" />
-                    <element signature="e#7129#7238#0" expanded="false" />
-                    <element signature="e#7341#7557#0" expanded="false" />
-                    <element signature="e#7668#7915#0" expanded="false" />
-                    <element signature="e#8031#8424#0" expanded="false" />
-                    <element signature="e#8542#8776#0" expanded="false" />
-                    <element signature="e#8886#9041#0" expanded="false" />
-                    <marker date="1527497996000" expanded="false" signature="3584:10694" ph="..." />
+                    <element signature="e#4274#4407#0" expanded="false" />
+                    <element signature="e#4517#4894#0" expanded="false" />
+                    <element signature="e#5004#5155#0" expanded="false" />
+                    <element signature="e#5268#5523#0" expanded="false" />
+                    <element signature="e#5636#6018#0" expanded="false" />
+                    <element signature="e#6134#6273#0" expanded="false" />
+                    <element signature="e#6382#6744#0" expanded="false" />
+                    <element signature="e#6854#7058#0" expanded="false" />
+                    <element signature="e#7165#7274#0" expanded="false" />
+                    <element signature="e#7377#7593#0" expanded="false" />
+                    <element signature="e#7704#7951#0" expanded="false" />
+                    <element signature="e#8067#8460#0" expanded="false" />
+                    <element signature="e#8578#8812#0" expanded="false" />
+                    <element signature="e#8922#9077#0" expanded="false" />
+                    <marker date="1527498145000" expanded="false" signature="3620:10730" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -158,7 +159,7 @@
             <entry file="file://$PROJECT_DIR$/tecqii/crawler.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="460">
-                  <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+                  <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
                   <folding>
                     <element signature="e#0#9#0" expanded="true" />
                     <element signature="e#557#711#0" expanded="false" />
@@ -677,21 +678,21 @@
           <folding>
             <element signature="e#0#9#0" expanded="true" />
             <element signature="e#557#711#0" expanded="false" />
-            <element signature="e#4238#4371#0" expanded="false" />
-            <element signature="e#4481#4858#0" expanded="false" />
-            <element signature="e#4968#5119#0" expanded="false" />
-            <element signature="e#5232#5487#0" expanded="false" />
-            <element signature="e#5600#5982#0" expanded="false" />
-            <element signature="e#6098#6237#0" expanded="false" />
-            <element signature="e#6346#6708#0" expanded="false" />
-            <element signature="e#6818#7022#0" expanded="false" />
-            <element signature="e#7129#7238#0" expanded="false" />
-            <element signature="e#7341#7557#0" expanded="false" />
-            <element signature="e#7668#7915#0" expanded="false" />
-            <element signature="e#8031#8424#0" expanded="false" />
-            <element signature="e#8542#8776#0" expanded="false" />
-            <element signature="e#8886#9041#0" expanded="false" />
-            <marker date="1527497996000" expanded="false" signature="3584:10694" ph="..." />
+            <element signature="e#4274#4407#0" expanded="false" />
+            <element signature="e#4517#4894#0" expanded="false" />
+            <element signature="e#5004#5155#0" expanded="false" />
+            <element signature="e#5268#5523#0" expanded="false" />
+            <element signature="e#5636#6018#0" expanded="false" />
+            <element signature="e#6134#6273#0" expanded="false" />
+            <element signature="e#6382#6744#0" expanded="false" />
+            <element signature="e#6854#7058#0" expanded="false" />
+            <element signature="e#7165#7274#0" expanded="false" />
+            <element signature="e#7377#7593#0" expanded="false" />
+            <element signature="e#7704#7951#0" expanded="false" />
+            <element signature="e#8067#8460#0" expanded="false" />
+            <element signature="e#8578#8812#0" expanded="false" />
+            <element signature="e#8922#9077#0" expanded="false" />
+            <marker date="1527498145000" expanded="false" signature="3620:10730" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1081,26 +1082,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tecqii/crawler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="69" column="59" selection-start-line="69" selection-start-column="59" selection-end-line="69" selection-end-column="59" />
+        <state relative-caret-position="585">
+          <caret line="65" column="30" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="30" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
             <element signature="e#557#711#0" expanded="false" />
-            <element signature="e#4238#4371#0" expanded="false" />
-            <element signature="e#4481#4858#0" expanded="false" />
-            <element signature="e#4968#5119#0" expanded="false" />
-            <element signature="e#5232#5487#0" expanded="false" />
-            <element signature="e#5600#5982#0" expanded="false" />
-            <element signature="e#6098#6237#0" expanded="false" />
-            <element signature="e#6346#6708#0" expanded="false" />
-            <element signature="e#6818#7022#0" expanded="false" />
-            <element signature="e#7129#7238#0" expanded="false" />
-            <element signature="e#7341#7557#0" expanded="false" />
-            <element signature="e#7668#7915#0" expanded="false" />
-            <element signature="e#8031#8424#0" expanded="false" />
-            <element signature="e#8542#8776#0" expanded="false" />
-            <element signature="e#8886#9041#0" expanded="false" />
-            <marker date="1527497996000" expanded="false" signature="3584:10694" ph="..." />
+            <element signature="e#4274#4407#0" expanded="false" />
+            <element signature="e#4517#4894#0" expanded="false" />
+            <element signature="e#5004#5155#0" expanded="false" />
+            <element signature="e#5268#5523#0" expanded="false" />
+            <element signature="e#5636#6018#0" expanded="false" />
+            <element signature="e#6134#6273#0" expanded="false" />
+            <element signature="e#6382#6744#0" expanded="false" />
+            <element signature="e#6854#7058#0" expanded="false" />
+            <element signature="e#7165#7274#0" expanded="false" />
+            <element signature="e#7377#7593#0" expanded="false" />
+            <element signature="e#7704#7951#0" expanded="false" />
+            <element signature="e#8067#8460#0" expanded="false" />
+            <element signature="e#8578#8812#0" expanded="false" />
+            <element signature="e#8922#9077#0" expanded="false" />
+            <marker date="1527498145000" expanded="false" signature="3620:10730" ph="..." />
           </folding>
         </state>
       </provider>
