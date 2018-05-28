@@ -53,8 +53,8 @@ class Crawler():
             print('loading took too much time')
         else:
             user_ids = self.driver.find_elements_by_xpath('//*[@id="main"]/div/div/div[2]/div[*]/div/div/p[1]/a')
+            time.sleep(10)
             for user_id in user_ids:
-                time.sleep(5)
                 user = User.objects.update_or_create(
                     user_id=user_id.text.strip(),
                     # defaults={
