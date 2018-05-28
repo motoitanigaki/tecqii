@@ -1,4 +1,5 @@
 import os
+import sys
 import time
 import datetime
 import traceback
@@ -70,17 +71,16 @@ class Crawler():
                         user_id=user_id.text.strip(),
                     )
                     print(user, ' JSONDecodeError')
-                except:
-                    user = User.objects.update_or_create(
-                        user_id=user_id.text.strip(),
-                    )
-                    print(user, ' error happened. will wait 5 seconds.')
+                except RemoteDisconnected:
+                    print('RemoteDisconnected. will wait 5 seconds.')
                     time.sleep(5)
             try:
                 self.driver.find_element_by_xpath('//*[@id="main"]/div/div/div[2]/div[101]/ul/li[2]/a')
             except NoSuchElementException:
                 print('no next button, will switch to next char.')
                 return False
+            except:
+                print(sys.exc_info()[1])
             else:
                 return True
 

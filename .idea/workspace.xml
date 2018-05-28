@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d83b0ff0-a97e-4bd4-a5e0-f16611d415fd" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tecqii/crawler.py" afterPath="$PROJECT_DIR$/tecqii/crawler.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tecqii/models.py" afterPath="$PROJECT_DIR$/tecqii/models.py" />
     </list>
     <ignored path="tecqii.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,9 +26,21 @@
     <favorites_list name="tecqii" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6082741">
+    <splitter split-orientation="horizontal" split-proportion="0.6302521">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="get_users.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/tecqii/management/commands/get_users.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="306">
+                  <caret line="49" column="40" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="40" />
+                  <folding>
+                    <element signature="e#17#27#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file leaf-file-name="crawl_users.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/tecqii/management/commands/crawl_users.py">
               <provider selected="true" editor-type-id="text-editor">
@@ -95,26 +108,25 @@
           <file leaf-file-name="crawler.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/tecqii/crawler.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="570">
-                  <caret line="77" column="33" selection-start-line="77" selection-start-column="33" selection-end-line="77" selection-end-column="33" />
+                <state relative-caret-position="420">
+                  <caret line="74" column="26" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="26" />
                   <folding>
                     <element signature="e#0#9#0" expanded="true" />
-                    <element signature="e#600#754#0" expanded="false" />
-                    <element signature="e#4570#4703#0" expanded="false" />
-                    <element signature="e#4813#5190#0" expanded="false" />
-                    <element signature="e#5300#5451#0" expanded="false" />
-                    <element signature="e#5564#5819#0" expanded="false" />
-                    <element signature="e#5932#6314#0" expanded="false" />
-                    <element signature="e#6430#6569#0" expanded="false" />
-                    <element signature="e#6678#7040#0" expanded="false" />
-                    <element signature="e#7150#7354#0" expanded="false" />
-                    <element signature="e#7461#7570#0" expanded="false" />
-                    <element signature="e#7673#7889#0" expanded="false" />
-                    <element signature="e#8000#8247#0" expanded="false" />
-                    <element signature="e#8363#8756#0" expanded="false" />
-                    <element signature="e#8874#9108#0" expanded="false" />
-                    <element signature="e#9218#9373#0" expanded="false" />
-                    <marker date="1527500190000" expanded="false" signature="3916:11026" ph="..." />
+                    <element signature="e#611#765#0" expanded="false" />
+                    <element signature="e#4524#4657#0" expanded="false" />
+                    <element signature="e#4767#5144#0" expanded="false" />
+                    <element signature="e#5254#5405#0" expanded="false" />
+                    <element signature="e#5518#5773#0" expanded="false" />
+                    <element signature="e#5886#6268#0" expanded="false" />
+                    <element signature="e#6384#6523#0" expanded="false" />
+                    <element signature="e#6632#6994#0" expanded="false" />
+                    <element signature="e#7104#7308#0" expanded="false" />
+                    <element signature="e#7415#7524#0" expanded="false" />
+                    <element signature="e#7627#7843#0" expanded="false" />
+                    <element signature="e#7954#8201#0" expanded="false" />
+                    <element signature="e#8317#8710#0" expanded="false" />
+                    <element signature="e#8828#9062#0" expanded="false" />
+                    <element signature="e#9172#9327#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -125,16 +137,6 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="435">
                   <caret line="44" column="22" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="secrets.json" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/tecqii/secrets.json">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="360">
-                  <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
                   <folding />
                 </state>
               </provider>
@@ -161,7 +163,7 @@
                   <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
                   <folding>
                     <element signature="e#0#9#0" expanded="true" />
-                    <element signature="e#600#754#0" expanded="false" />
+                    <element signature="e#611#765#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -170,8 +172,8 @@
           <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/tecqii/models.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="360">
-                  <caret line="25" column="21" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="21" />
+                <state relative-caret-position="699">
+                  <caret line="54" column="10" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="10" />
                   <folding />
                 </state>
               </provider>
@@ -209,9 +211,9 @@
         <option value="$PROJECT_DIR$/tecqii/management/commands/get_users.py" />
         <option value="$PROJECT_DIR$/tecqii/secrets.json" />
         <option value="$PROJECT_DIR$/tecqii/settings_base.py" />
-        <option value="$PROJECT_DIR$/tecqii/models.py" />
         <option value="$PROJECT_DIR$/tecqii/management/commands/get_items.py" />
         <option value="$PROJECT_DIR$/tecqii/management/commands/crawl_users_qiita.py" />
+        <option value="$PROJECT_DIR$/tecqii/models.py" />
         <option value="$PROJECT_DIR$/tecqii/crawler.py" />
       </list>
     </option>
@@ -676,22 +678,21 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#600#754#0" expanded="false" />
-            <element signature="e#4570#4703#0" expanded="false" />
-            <element signature="e#4813#5190#0" expanded="false" />
-            <element signature="e#5300#5451#0" expanded="false" />
-            <element signature="e#5564#5819#0" expanded="false" />
-            <element signature="e#5932#6314#0" expanded="false" />
-            <element signature="e#6430#6569#0" expanded="false" />
-            <element signature="e#6678#7040#0" expanded="false" />
-            <element signature="e#7150#7354#0" expanded="false" />
-            <element signature="e#7461#7570#0" expanded="false" />
-            <element signature="e#7673#7889#0" expanded="false" />
-            <element signature="e#8000#8247#0" expanded="false" />
-            <element signature="e#8363#8756#0" expanded="false" />
-            <element signature="e#8874#9108#0" expanded="false" />
-            <element signature="e#9218#9373#0" expanded="false" />
-            <marker date="1527500190000" expanded="false" signature="3916:11026" ph="..." />
+            <element signature="e#611#765#0" expanded="false" />
+            <element signature="e#4524#4657#0" expanded="false" />
+            <element signature="e#4767#5144#0" expanded="false" />
+            <element signature="e#5254#5405#0" expanded="false" />
+            <element signature="e#5518#5773#0" expanded="false" />
+            <element signature="e#5886#6268#0" expanded="false" />
+            <element signature="e#6384#6523#0" expanded="false" />
+            <element signature="e#6632#6994#0" expanded="false" />
+            <element signature="e#7104#7308#0" expanded="false" />
+            <element signature="e#7415#7524#0" expanded="false" />
+            <element signature="e#7627#7843#0" expanded="false" />
+            <element signature="e#7954#8201#0" expanded="false" />
+            <element signature="e#8317#8710#0" expanded="false" />
+            <element signature="e#8828#9062#0" expanded="false" />
+            <element signature="e#9172#9327#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -962,7 +963,7 @@
         <state relative-caret-position="270">
           <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
           <folding>
-            <element signature="e#17#69#0" expanded="true" />
+            <element signature="e#17#69#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -985,16 +986,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tecqii/management/commands/get_users.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="e#17#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tecqii/secrets.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -1007,14 +998,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="411">
           <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tecqii/management/commands/get_tags.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="34" column="26" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
           <folding />
         </state>
       </provider>
@@ -1073,34 +1056,51 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tecqii/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="25" column="21" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="21" />
+        <state relative-caret-position="699">
+          <caret line="54" column="10" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tecqii/management/commands/get_users.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="49" column="40" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="40" />
+          <folding>
+            <element signature="e#17#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tecqii/management/commands/get_tags.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="34" column="26" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tecqii/crawler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="77" column="33" selection-start-line="77" selection-start-column="33" selection-end-line="77" selection-end-column="33" />
+        <state relative-caret-position="420">
+          <caret line="74" column="26" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="26" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#600#754#0" expanded="false" />
-            <element signature="e#4570#4703#0" expanded="false" />
-            <element signature="e#4813#5190#0" expanded="false" />
-            <element signature="e#5300#5451#0" expanded="false" />
-            <element signature="e#5564#5819#0" expanded="false" />
-            <element signature="e#5932#6314#0" expanded="false" />
-            <element signature="e#6430#6569#0" expanded="false" />
-            <element signature="e#6678#7040#0" expanded="false" />
-            <element signature="e#7150#7354#0" expanded="false" />
-            <element signature="e#7461#7570#0" expanded="false" />
-            <element signature="e#7673#7889#0" expanded="false" />
-            <element signature="e#8000#8247#0" expanded="false" />
-            <element signature="e#8363#8756#0" expanded="false" />
-            <element signature="e#8874#9108#0" expanded="false" />
-            <element signature="e#9218#9373#0" expanded="false" />
-            <marker date="1527500190000" expanded="false" signature="3916:11026" ph="..." />
+            <element signature="e#611#765#0" expanded="false" />
+            <element signature="e#4524#4657#0" expanded="false" />
+            <element signature="e#4767#5144#0" expanded="false" />
+            <element signature="e#5254#5405#0" expanded="false" />
+            <element signature="e#5518#5773#0" expanded="false" />
+            <element signature="e#5886#6268#0" expanded="false" />
+            <element signature="e#6384#6523#0" expanded="false" />
+            <element signature="e#6632#6994#0" expanded="false" />
+            <element signature="e#7104#7308#0" expanded="false" />
+            <element signature="e#7415#7524#0" expanded="false" />
+            <element signature="e#7627#7843#0" expanded="false" />
+            <element signature="e#7954#8201#0" expanded="false" />
+            <element signature="e#8317#8710#0" expanded="false" />
+            <element signature="e#8828#9062#0" expanded="false" />
+            <element signature="e#9172#9327#0" expanded="false" />
           </folding>
         </state>
       </provider>
