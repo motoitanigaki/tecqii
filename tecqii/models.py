@@ -30,3 +30,24 @@ class User(models.Model):
 
     def __str__(self):
         return str(self.user_id)
+
+class Item(models.Model):
+    rendered_body = models.CharField(max_length=1048576, blank=True, null=True)
+    body = models.CharField(max_length=1048576, blank=True, null=True)
+    # coediting =  models.BooleanField(default=False)
+    comments_count = models.IntegerField(default=0, db_index=True)
+    created_at = models.DateTimeField(null=True)
+    # group
+    item_id = models.CharField(max_length=128, unique=True)
+    likes_count = models.IntegerField(default=0, db_index=True)
+    # private
+    reactions_count = models.IntegerField(default=0, db_index=True)
+    tags = models.ManyToManyField(Tag)
+    title = models.CharField(max_length=256, blank=True, null=True, db_index=True)
+    updated_at = models.DateTimeField(null=True)
+    url = models.URLField(max_length=1024, blank=True, null=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+    # page_views_count = models.IntegerField(default=0, db_index=True)
+
+    def __str__(self):
+        return str(self.item_id)

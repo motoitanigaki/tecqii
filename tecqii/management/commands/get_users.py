@@ -15,21 +15,41 @@ class Command(BaseCommand):
         print("running get_tags batch ...")
 
         client = QiitaClient(access_token=settings.QIITA_ACCESS_TOKEN)
-        # client = QiitaClient(access_token='hoge')
+        client = QiitaClient(access_token=settings.QIITA_ACCESS_TOKENS[0])
         users = User.objects.all()
         counter = 0
         for user in users:
             counter += 1
-            if counter > 1000: # When the call count hits the limitation, wait till it gets callable again.
+            if counter == 1000:
+                client = QiitaClient(access_token=settings.QIITA_ACCESS_TOKENS[1])
+            elif counter == 2000:
+                client = QiitaClient(access_token=settings.QIITA_ACCESS_TOKENS[2])
+            elif counter == 3000:
+                client = QiitaClient(access_token=settings.QIITA_ACCESS_TOKENS[3])
+            elif counter == 4000:
+                client = QiitaClient(access_token=settings.QIITA_ACCESS_TOKENS[4])
+            elif counter == 5000:
+                client = QiitaClient(access_token=settings.QIITA_ACCESS_TOKENS[5])
+            elif counter == 6000:
+                client = QiitaClient(access_token=settings.QIITA_ACCESS_TOKENS[6])
+            elif counter == 7000:
+                client = QiitaClient(access_token=settings.QIITA_ACCESS_TOKENS[7])
+            elif counter == 8000:
+                client = QiitaClient(access_token=settings.QIITA_ACCESS_TOKENS[8])
+            elif counter == 9000:
+                client = QiitaClient(access_token=settings.QIITA_ACCESS_TOKENS[9])
+            elif counter > 10000:
                 counter = 1
                 print('wait for 1 hour. --------------------')
                 time.sleep(3600)
                 print('1 hour has passed. --------------------')
+                client = QiitaClient(access_token=settings.QIITA_ACCESS_TOKENS[0])
             try:
                 response = client.get_user(id=user.user_id)
             except:
-                print(user.user_id)
                 print(sys.exc_info()[1])
+                User.objects.get(user_id=user.user_id).delete()
+                print(user.user_id,' deleted.')
             else:
                 response_json = response.to_json()
                 User.objects.update_or_create(

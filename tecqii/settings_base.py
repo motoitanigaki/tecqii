@@ -27,11 +27,11 @@ ALLOWED_HOSTS = [
 # timezone as the operating system.
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
-TIME_ZONE = "UTC"
+TIME_ZONE = "Asia/Tokyo"
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = "ja"
 
 SITE_ID = int(os.environ.get("SITE_ID", 1))
 
@@ -207,4 +207,4 @@ def get_secret(setting, secrets=secrets):
         raise ImproperlyConfigured("Set the {} setting".format(setting))
 
 QIITA_ACCESS_TOKEN = get_secret('QIITA_ACCESS_TOKEN')
-QIITA_USER_RANKING_URL = 'https://qiita-user-ranking.herokuapp.com/'
+QIITA_ACCESS_TOKENS = get_secret('QIITA_ACCESS_TOKENS')
