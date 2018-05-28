@@ -47,7 +47,7 @@ class Crawler():
         QIITA_INTERNALAPI_HOVERCARD = 'https://qiita.com/api/internal/hovercard_users/'
         try:
             self.driver.get(QIITA_USERS_URL + '?char=' + char + '&page=' + str(page))
-            WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((By.XPATH, '//*[@id="main"]/div/div/div[1]/h2')))
+            WebDriverWait(self.driver, 30).until(EC.presence_of_element_located((By.XPATH, '//*[@id="main"]/div/div/div[1]/h2')))
         except TimeoutException:
             print('loading took too much time')
         else:
@@ -76,8 +76,8 @@ class Crawler():
                     print('RemoteDisconnected. will wait 1 minute.')
                     time.sleep(60)
                 except URLError:
-                    print('URLError. will wait 1 minute.')
-                    time.sleep(60)
+                    print('URLError. will break.')
+                    break
             try:
                 self.driver.find_element_by_xpath('//*[@id="main"]/div/div/div[2]/div[101]/ul/li[2]/a')
             except NoSuchElementException:
