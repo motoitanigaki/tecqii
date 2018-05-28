@@ -16,3 +16,4 @@ class UserTagRelationAdmin(admin.ModelAdmin):
 admin.site.register(Tag, TagAdmin)
 admin.site.register(User, UserAdmin)
 admin.site.register(Item, ItemAdmin)
+admin.site.register(UserTagRelation, UserTagRelationAdmin)

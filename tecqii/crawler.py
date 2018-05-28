@@ -54,32 +54,43 @@ class Crawler():
         else:
             user_ids = self.driver.find_elements_by_xpath('//*[@id="main"]/div/div/div[2]/div[*]/div/div/p[1]/a')
             for user_id in user_ids:
-                try:
-                    time.sleep(0.5)
-                    hover_card = requests.request('GET', QIITA_INTERNALAPI_HOVERCARD+user_id.text.strip()) # using internal api.
-                    hover_card_json = hover_card.json()
-                    user = User.objects.update_or_create(
-                        user_id=user_id.text.strip(),
-                        defaults={
-                            'items_count': hover_card_json['articles_count'],
-                            'contribution_count': int(hover_card_json['contribution']),
-                            'permanent_id': int(hover_card_json['id']),
-                            'name': hover_card_json['name'],
-                            'profile_image_url': hover_card_json['profile_image_url']
-                        }
-                    )
-                    print(user)
-                except JSONDecodeError:
-                    user = User.objects.update_or_create(
-                        user_id=user_id.text.strip(),
-                    )
-                    print(user, ' JSONDecodeError')
-                except RemoteDisconnected:
-                    print('RemoteDisconnected. will wait 1 minute.')
-                    time.sleep(60)
-                except URLError:
-                    print('URLError. will wait 1 minute.')
-                    time.sleep(60)
+                user = User.objects.update_or_create(
+                    user_id=user_id.text.strip(),
+                    # defaults={
+                    #     'items_count': hover_card_json['articles_count'],
+                    #     'contribution_count': int(hover_card_json['contribution']),
+                    #     'permanent_id': int(hover_card_json['id']),
+                    #     'name': hover_card_json['name'],
+                    #     'profile_image_url': hover_card_json['profile_image_url']
+                    # }
+                )
+                print(user)
+                # try:
+                #     time.sleep(0.5)
+                #     hover_card = requests.request('GET', QIITA_INTERNALAPI_HOVERCARD+user_id.text.strip()) # using internal api.
+                #     hover_card_json = hover_card.json()
+                #     user = User.objects.update_or_create(
+                #         user_id=user_id.text.strip(),
+                #         defaults={
+                #             'items_count': hover_card_json['articles_count'],
+                #             'contribution_count': int(hover_card_json['contribution']),
+                #             'permanent_id': int(hover_card_json['id']),
+                #             'name': hover_card_json['name'],
+                #             'profile_image_url': hover_card_json['profile_image_url']
+                #         }
+                #     )
+                #     print(user)
+                # except JSONDecodeError:
+                #     user = User.objects.update_or_create(
+                #         user_id=user_id.text.strip(),
+                #     )
+                #     print(user, ' JSONDecodeError')
+                # except RemoteDisconnected:
+                #     print('RemoteDisconnected. will wait 1 minute.')
+                #     time.sleep(60)
+                # except URLError:
+                #     print('URLError. will wait 1 minute.')
+                #     time.sleep(60)
             try:
                 self.driver.find_element_by_xpath('//*[@id="main"]/div/div/div[2]/div[101]/ul/li[2]/a')
             except NoSuchElementException:
