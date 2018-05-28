@@ -4,6 +4,7 @@ import datetime
 import traceback
 import requests
 from json.decoder import JSONDecodeError
+from http.client import RemoteDisconnected
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.chrome.options import Options
@@ -68,7 +69,13 @@ class Crawler():
                     user = User.objects.update_or_create(
                         user_id=user_id.text.strip(),
                     )
-                    print(user, ' some error of JSON happened')
+                    print(user, ' JSONDecodeError')
+                except RemoteDisconnected:
+                    user = User.objects.update_or_create(
+                        user_id=user_id.text.strip(),
+                    )
+                    print(user, ' RemoteDisconnected. will wait 5 seconds.')
+                    time.sleep(5)
             try:
                 self.driver.find_element_by_xpath('//*[@id="main"]/div/div/div[2]/div[101]/ul/li[2]/a')
             except NoSuchElementException:
