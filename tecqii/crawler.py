@@ -73,11 +73,11 @@ class Crawler():
                     )
                     print(user, ' JSONDecodeError')
                 except RemoteDisconnected:
-                    print('RemoteDisconnected. will wait 5 seconds.')
-                    time.sleep(5)
+                    print('RemoteDisconnected. will wait 1 minute.')
+                    time.sleep(60)
                 except URLError:
-                    print('URLError. will wait 5 seconds.')
-                    time.sleep(5)
+                    print('URLError. will wait 1 minute.')
+                    time.sleep(60)
             try:
                 self.driver.find_element_by_xpath('//*[@id="main"]/div/div/div[2]/div[101]/ul/li[2]/a')
             except NoSuchElementException:
