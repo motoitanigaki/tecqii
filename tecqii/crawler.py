@@ -46,6 +46,7 @@ class Crawler():
         QIITA_USERS_URL = 'https://qiita.com/users'
         QIITA_INTERNALAPI_HOVERCARD = 'https://qiita.com/api/internal/hovercard_users/'
         try:
+            print('char: ', char, 'page: ', page)
             self.driver.get(QIITA_USERS_URL + '?char=' + char + '&page=' + str(page))
             WebDriverWait(self.driver, 30).until(EC.presence_of_element_located((By.XPATH, '//*[@id="main"]/div/div/div[1]/h2')))
         except TimeoutException:
@@ -54,6 +55,7 @@ class Crawler():
             user_ids = self.driver.find_elements_by_xpath('//*[@id="main"]/div/div/div[2]/div[*]/div/div/p[1]/a')
             for user_id in user_ids:
                 try:
+                    time.sleep(0.5)
                     hover_card = requests.request('GET', QIITA_INTERNALAPI_HOVERCARD+user_id.text.strip()) # using internal api.
                     hover_card_json = hover_card.json()
                     user = User.objects.update_or_create(
@@ -76,8 +78,8 @@ class Crawler():
                     print('RemoteDisconnected. will wait 1 minute.')
                     time.sleep(60)
                 except URLError:
-                    print('URLError. will break.')
-                    break
+                    print('URLError. will wait 1 minute.')
+                    time.sleep(60)
             try:
                 self.driver.find_element_by_xpath('//*[@id="main"]/div/div/div[2]/div[101]/ul/li[2]/a')
             except NoSuchElementException:
