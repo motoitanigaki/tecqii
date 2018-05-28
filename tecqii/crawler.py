@@ -2,6 +2,7 @@ import os
 import time
 import datetime
 import traceback
+import requests
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.chrome.options import Options
@@ -39,6 +40,7 @@ class Crawler():
 
     def crawl_qiita_users(self, char='A', page=1):
         QIITA_USERS_URL = 'https://qiita.com/users'
+        QIITA_INTERNALAPI_HOVERCARD = 'https://qiita.com/api/internal/hovercard_users/'
         try:
             self.driver.get(QIITA_USERS_URL + '?char=' + char + '&page=' + str(page))
             WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((By.XPATH, '//*[@id="main"]/div/div/div[1]/h2')))
@@ -47,11 +49,21 @@ class Crawler():
         else:
             user_ids = self.driver.find_elements_by_xpath('//*[@id="main"]/div/div/div[2]/div[*]/div/div/p[1]/a')
             for user_id in user_ids:
-                User.objects.update_or_create(
+                hover_card = requests.request('GET', QIITA_INTERNALAPI_HOVERCARD+user_id.text.strip()) # using internal api.
+                hover_card_json = hover_card.json()
+                user = User.objects.update_or_create(
                     user_id=user_id.text.strip(),
+                    defaults={
+                        'items_count': hover_card_json['articles_count'],
+                        'contribution_count': int(hover_card_json['contribution']),
+                        'permanent_id': int(hover_card_json['id']),
+                        'name': hover_card_json['name'],
+                        'profile_image_url': hover_card_json['profile_image_url']
+                    }
                 )
+                print(user)
             try:
-                next_button = self.driver.find_element_by_xpath('//*[@id="main"]/div/div/div[2]/div[101]/ul/li[2]/a')
+                self.driver.find_element_by_xpath('//*[@id="main"]/div/div/div[2]/div[101]/ul/li[2]/a')
             except NoSuchElementException:
                 print('no next button, will switch to next char.')
                 return False

@@ -2,19 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d83b0ff0-a97e-4bd4-a5e0-f16611d415fd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tecqii/management/commands/crawl_user_qiita.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tecqii/management/commands/crawl_users_qiita.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tecqii/management/commands/get_items.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ghostdriver.log" afterPath="$PROJECT_DIR$/ghostdriver.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tecqii/admin.py" afterPath="$PROJECT_DIR$/tecqii/admin.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tecqii/crawler.py" afterPath="$PROJECT_DIR$/tecqii/crawler.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tecqii/management/commands/crawl_users.py" afterPath="$PROJECT_DIR$/tecqii/management/commands/crawl_users.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tecqii/management/commands/get_users.py" afterPath="$PROJECT_DIR$/tecqii/management/commands/get_users.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tecqii/models.py" afterPath="$PROJECT_DIR$/tecqii/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tecqii/secrets.json" afterPath="$PROJECT_DIR$/tecqii/secrets.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tecqii/settings_base.py" afterPath="$PROJECT_DIR$/tecqii/settings_base.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tecqii/management/commands/crawl_users_qiita.py" afterPath="$PROJECT_DIR$/tecqii/management/commands/crawl_users_qiita.py" />
     </list>
     <ignored path="tecqii.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,21 +27,9 @@
     <favorites_list name="tecqii" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.59599227">
+    <splitter split-orientation="horizontal" split-proportion="0.6082741">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="get_users.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/tecqii/management/commands/get_users.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="270">
-                  <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#17#27#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="crawl_users.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/tecqii/management/commands/crawl_users.py">
               <provider selected="true" editor-type-id="text-editor">
@@ -65,8 +43,8 @@
           <file leaf-file-name="get_items.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/tecqii/management/commands/get_items.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="189">
-                  <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+                <state relative-caret-position="429">
+                  <caret line="58" column="54" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="54" />
                   <folding>
                     <element signature="e#17#27#0" expanded="true" />
                   </folding>
@@ -77,9 +55,21 @@
           <file leaf-file-name="client.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/../tecqii_env/lib/python3.6/site-packages/qiita_v2/client.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="229">
-                  <caret line="150" column="8" selection-start-line="150" selection-start-column="8" selection-end-line="150" selection-end-column="8" />
+                <state relative-caret-position="418">
+                  <caret line="85" column="23" selection-start-line="85" selection-start-column="8" selection-end-line="85" selection-end-column="23" />
                   <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="client_base.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../tecqii_env/lib/python3.6/site-packages/qiita_v2/client_base.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="262">
+                  <caret line="103" column="8" selection-start-line="103" selection-start-column="8" selection-end-line="103" selection-end-column="8" />
+                  <folding>
+                    <element signature="e#135#150#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -94,39 +84,50 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="crawl_users_qiita.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="crawl_users_qiita.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/tecqii/management/commands/crawl_users_qiita.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="225">
-                  <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+                  <caret line="22" column="48" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="crawler.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="crawler.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/tecqii/crawler.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="313">
-                  <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+                <state relative-caret-position="549">
+                  <caret line="63" column="22" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
                   <folding>
                     <element signature="e#0#9#0" expanded="true" />
-                    <element signature="e#500#654#0" expanded="false" />
-                    <element signature="e#3202#3335#0" expanded="false" />
-                    <element signature="e#3445#3822#0" expanded="false" />
-                    <element signature="e#3932#4083#0" expanded="false" />
-                    <element signature="e#4196#4451#0" expanded="false" />
-                    <element signature="e#4564#4946#0" expanded="false" />
-                    <element signature="e#5062#5201#0" expanded="false" />
-                    <element signature="e#5310#5672#0" expanded="false" />
-                    <element signature="e#5782#5986#0" expanded="false" />
-                    <element signature="e#6093#6202#0" expanded="false" />
-                    <element signature="e#6305#6521#0" expanded="false" />
-                    <element signature="e#6632#6879#0" expanded="false" />
-                    <element signature="e#6995#7388#0" expanded="false" />
-                    <element signature="e#7506#7740#0" expanded="false" />
-                    <element signature="e#7850#8005#0" expanded="false" />
+                    <element signature="e#516#670#0" expanded="false" />
+                    <element signature="e#3922#4055#0" expanded="false" />
+                    <element signature="e#4165#4542#0" expanded="false" />
+                    <element signature="e#4652#4803#0" expanded="false" />
+                    <element signature="e#4916#5171#0" expanded="false" />
+                    <element signature="e#5284#5666#0" expanded="false" />
+                    <element signature="e#5782#5921#0" expanded="false" />
+                    <element signature="e#6030#6392#0" expanded="false" />
+                    <element signature="e#6502#6706#0" expanded="false" />
+                    <element signature="e#6813#6922#0" expanded="false" />
+                    <element signature="e#7025#7241#0" expanded="false" />
+                    <element signature="e#7352#7599#0" expanded="false" />
+                    <element signature="e#7715#8108#0" expanded="false" />
+                    <element signature="e#8226#8460#0" expanded="false" />
+                    <element signature="e#8570#8725#0" expanded="false" />
+                    <marker date="1527497614000" expanded="false" signature="3268:10378" ph="..." />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="api.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../tecqii_env/lib/python3.6/site-packages/requests/api.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="435">
+                  <caret line="44" column="22" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -137,18 +138,6 @@
                 <state relative-caret-position="360">
                   <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
                   <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/tecqii/admin.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="210">
-                  <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-                  <folding>
-                    <element signature="e#0#32#0" expanded="true" />
-                  </folding>
                 </state>
               </provider>
             </entry>
@@ -171,10 +160,10 @@
             <entry file="file://$PROJECT_DIR$/tecqii/crawler.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="460">
-                  <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+                  <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
                   <folding>
                     <element signature="e#0#9#0" expanded="true" />
-                    <element signature="e#500#654#0" expanded="false" />
+                    <element signature="e#516#670#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -183,8 +172,8 @@
           <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/tecqii/models.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="555">
-                  <caret line="44" column="8" selection-start-line="44" selection-start-column="4" selection-end-line="44" selection-end-column="8" />
+                <state relative-caret-position="360">
+                  <caret line="25" column="21" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="21" />
                   <folding />
                 </state>
               </provider>
@@ -217,15 +206,15 @@
         <option value="$PROJECT_DIR$/../tecqii_env/lib/python3.6/site-packages/qiita_v2/response.py" />
         <option value="$PROJECT_DIR$/tecqii/settings_production.py" />
         <option value="$PROJECT_DIR$/tecqii/management/commands/crawl_users.py" />
-        <option value="$PROJECT_DIR$/tecqii/management/commands/crawl_users_qiita.py" />
         <option value="$PROJECT_DIR$/tecqii/management/commands/crawl_user_qiita.py" />
-        <option value="$PROJECT_DIR$/tecqii/crawler.py" />
         <option value="$PROJECT_DIR$/tecqii/admin.py" />
         <option value="$PROJECT_DIR$/tecqii/management/commands/get_users.py" />
         <option value="$PROJECT_DIR$/tecqii/secrets.json" />
         <option value="$PROJECT_DIR$/tecqii/settings_base.py" />
         <option value="$PROJECT_DIR$/tecqii/models.py" />
         <option value="$PROJECT_DIR$/tecqii/management/commands/get_items.py" />
+        <option value="$PROJECT_DIR$/tecqii/management/commands/crawl_users_qiita.py" />
+        <option value="$PROJECT_DIR$/tecqii/crawler.py" />
       </list>
     </option>
   </component>
@@ -675,14 +664,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tecqii/management/commands/crawl_users.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tecqii/management/commands/crawl_users_qiita.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -697,21 +678,22 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#500#654#0" expanded="false" />
-            <element signature="e#3202#3335#0" expanded="false" />
-            <element signature="e#3445#3822#0" expanded="false" />
-            <element signature="e#3932#4083#0" expanded="false" />
-            <element signature="e#4196#4451#0" expanded="false" />
-            <element signature="e#4564#4946#0" expanded="false" />
-            <element signature="e#5062#5201#0" expanded="false" />
-            <element signature="e#5310#5672#0" expanded="false" />
-            <element signature="e#5782#5986#0" expanded="false" />
-            <element signature="e#6093#6202#0" expanded="false" />
-            <element signature="e#6305#6521#0" expanded="false" />
-            <element signature="e#6632#6879#0" expanded="false" />
-            <element signature="e#6995#7388#0" expanded="false" />
-            <element signature="e#7506#7740#0" expanded="false" />
-            <element signature="e#7850#8005#0" expanded="false" />
+            <element signature="e#516#670#0" expanded="false" />
+            <element signature="e#3922#4055#0" expanded="false" />
+            <element signature="e#4165#4542#0" expanded="false" />
+            <element signature="e#4652#4803#0" expanded="false" />
+            <element signature="e#4916#5171#0" expanded="false" />
+            <element signature="e#5284#5666#0" expanded="false" />
+            <element signature="e#5782#5921#0" expanded="false" />
+            <element signature="e#6030#6392#0" expanded="false" />
+            <element signature="e#6502#6706#0" expanded="false" />
+            <element signature="e#6813#6922#0" expanded="false" />
+            <element signature="e#7025#7241#0" expanded="false" />
+            <element signature="e#7352#7599#0" expanded="false" />
+            <element signature="e#7715#8108#0" expanded="false" />
+            <element signature="e#8226#8460#0" expanded="false" />
+            <element signature="e#8570#8725#0" expanded="false" />
+            <marker date="1527497614000" expanded="false" signature="3268:10378" ph="..." />
           </folding>
         </state>
       </provider>
@@ -908,13 +890,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../tecqii_env/lib/python3.6/site-packages/qiita_v2/client_base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../tecqii_env/lib/python3.6/site-packages/qiita_v2/response.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-135">
@@ -994,31 +969,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tecqii/crawler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#500#654#0" expanded="false" />
-            <element signature="e#3202#3335#0" expanded="false" />
-            <element signature="e#3445#3822#0" expanded="false" />
-            <element signature="e#3932#4083#0" expanded="false" />
-            <element signature="e#4196#4451#0" expanded="false" />
-            <element signature="e#4564#4946#0" expanded="false" />
-            <element signature="e#5062#5201#0" expanded="false" />
-            <element signature="e#5310#5672#0" expanded="false" />
-            <element signature="e#5782#5986#0" expanded="false" />
-            <element signature="e#6093#6202#0" expanded="false" />
-            <element signature="e#6305#6521#0" expanded="false" />
-            <element signature="e#6632#6879#0" expanded="false" />
-            <element signature="e#6995#7388#0" expanded="false" />
-            <element signature="e#7506#7740#0" expanded="false" />
-            <element signature="e#7850#8005#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tecqii/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -1055,37 +1005,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../tecqii_env/lib/python3.6/site-packages/qiita_v2/client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="150" column="8" selection-start-line="150" selection-start-column="8" selection-end-line="150" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tecqii/settings_base.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="411">
           <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tecqii/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="44" column="8" selection-start-line="44" selection-start-column="4" selection-end-line="44" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tecqii/management/commands/get_items.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="e#17#27#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1108,8 +1032,78 @@
     <entry file="file://$PROJECT_DIR$/tecqii/management/commands/crawl_users_qiita.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+          <caret line="22" column="48" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../tecqii_env/lib/python3.6/site-packages/qiita_v2/client_base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="103" column="8" selection-start-line="103" selection-start-column="8" selection-end-line="103" selection-end-column="8" />
+          <folding>
+            <element signature="e#135#150#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../tecqii_env/lib/python3.6/site-packages/qiita_v2/client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="85" column="23" selection-start-line="85" selection-start-column="8" selection-end-line="85" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tecqii/management/commands/get_items.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="58" column="54" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="54" />
+          <folding>
+            <element signature="e#17#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../tecqii_env/lib/python3.6/site-packages/requests/api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="44" column="22" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tecqii/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="25" column="21" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tecqii/crawler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="549">
+          <caret line="63" column="22" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#516#670#0" expanded="false" />
+            <element signature="e#3922#4055#0" expanded="false" />
+            <element signature="e#4165#4542#0" expanded="false" />
+            <element signature="e#4652#4803#0" expanded="false" />
+            <element signature="e#4916#5171#0" expanded="false" />
+            <element signature="e#5284#5666#0" expanded="false" />
+            <element signature="e#5782#5921#0" expanded="false" />
+            <element signature="e#6030#6392#0" expanded="false" />
+            <element signature="e#6502#6706#0" expanded="false" />
+            <element signature="e#6813#6922#0" expanded="false" />
+            <element signature="e#7025#7241#0" expanded="false" />
+            <element signature="e#7352#7599#0" expanded="false" />
+            <element signature="e#7715#8108#0" expanded="false" />
+            <element signature="e#8226#8460#0" expanded="false" />
+            <element signature="e#8570#8725#0" expanded="false" />
+            <marker date="1527497614000" expanded="false" signature="3268:10378" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
