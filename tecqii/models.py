@@ -52,4 +52,14 @@ class Item(models.Model):
     def __str__(self):
         return str(self.item_id)
 
-# class User
+class UserTagRelation(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    tag = models.ForeignKey(Tag, on_delete=models.CASCADE)
+    items_count = models.IntegerField(default=0, db_index=True)
+    contribution_count = models.IntegerField(default=0, db_index=True)
+
+    class Meta:
+        unique_together = ('user', 'tag')
+
+    def __str__(self):
+        return str(self.user.user_id)

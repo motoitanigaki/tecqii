@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d83b0ff0-a97e-4bd4-a5e0-f16611d415fd" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tecqii/crawler.py" afterPath="$PROJECT_DIR$/tecqii/crawler.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tecqii/models.py" afterPath="$PROJECT_DIR$/tecqii/models.py" />
     </list>
     <ignored path="tecqii.iws" />
@@ -25,7 +26,7 @@
     <favorites_list name="tecqii" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6302521">
+    <splitter split-orientation="horizontal" split-proportion="0.7530705">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="get_users.py" pinned="false" current-in-tab="false">
@@ -107,25 +108,26 @@
           <file leaf-file-name="crawler.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/tecqii/crawler.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="285">
-                  <caret line="54" column="20" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
+                <state relative-caret-position="489">
+                  <caret line="78" column="35" selection-start-line="78" selection-start-column="35" selection-end-line="78" selection-end-column="35" />
                   <folding>
                     <element signature="e#0#9#0" expanded="true" />
-                    <element signature="e#611#765#0" expanded="false" />
-                    <element signature="e#4524#4657#0" expanded="false" />
-                    <element signature="e#4767#5144#0" expanded="false" />
-                    <element signature="e#5254#5405#0" expanded="false" />
-                    <element signature="e#5518#5773#0" expanded="false" />
-                    <element signature="e#5886#6268#0" expanded="false" />
-                    <element signature="e#6384#6523#0" expanded="false" />
-                    <element signature="e#6632#6994#0" expanded="false" />
-                    <element signature="e#7104#7308#0" expanded="false" />
-                    <element signature="e#7415#7524#0" expanded="false" />
-                    <element signature="e#7627#7843#0" expanded="false" />
-                    <element signature="e#7954#8201#0" expanded="false" />
-                    <element signature="e#8317#8710#0" expanded="false" />
-                    <element signature="e#8828#9062#0" expanded="false" />
-                    <element signature="e#9172#9327#0" expanded="false" />
+                    <element signature="e#645#799#0" expanded="false" />
+                    <element signature="e#4040#11141#0" expanded="false" />
+                    <element signature="e#4685#4818#0" expanded="false" />
+                    <element signature="e#4928#5305#0" expanded="false" />
+                    <element signature="e#5415#5566#0" expanded="false" />
+                    <element signature="e#5679#5934#0" expanded="false" />
+                    <element signature="e#6047#6429#0" expanded="false" />
+                    <element signature="e#6545#6684#0" expanded="false" />
+                    <element signature="e#6793#7155#0" expanded="false" />
+                    <element signature="e#7265#7469#0" expanded="false" />
+                    <element signature="e#7576#7685#0" expanded="false" />
+                    <element signature="e#7788#8004#0" expanded="false" />
+                    <element signature="e#8115#8362#0" expanded="false" />
+                    <element signature="e#8478#8871#0" expanded="false" />
+                    <element signature="e#8989#9223#0" expanded="false" />
+                    <element signature="e#9333#9488#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -159,10 +161,10 @@
             <entry file="file://$PROJECT_DIR$/tecqii/crawler.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="460">
-                  <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+                  <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
                   <folding>
                     <element signature="e#0#9#0" expanded="true" />
-                    <element signature="e#611#765#0" expanded="false" />
+                    <element signature="e#645#799#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -171,8 +173,8 @@
           <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/tecqii/models.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="699">
-                  <caret line="54" column="12" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="12" />
+                <state relative-caret-position="549">
+                  <caret line="54" column="36" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="36" />
                   <folding />
                 </state>
               </provider>
@@ -212,8 +214,8 @@
         <option value="$PROJECT_DIR$/tecqii/settings_base.py" />
         <option value="$PROJECT_DIR$/tecqii/management/commands/get_items.py" />
         <option value="$PROJECT_DIR$/tecqii/management/commands/crawl_users_qiita.py" />
-        <option value="$PROJECT_DIR$/tecqii/crawler.py" />
         <option value="$PROJECT_DIR$/tecqii/models.py" />
+        <option value="$PROJECT_DIR$/tecqii/crawler.py" />
       </list>
     </option>
   </component>
@@ -677,7 +679,22 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#611#765#0" expanded="false" />
+            <element signature="e#645#799#0" expanded="false" />
+            <element signature="e#4040#11141#0" expanded="false" />
+            <element signature="e#4685#4818#0" expanded="false" />
+            <element signature="e#4928#5305#0" expanded="false" />
+            <element signature="e#5415#5566#0" expanded="false" />
+            <element signature="e#5679#5934#0" expanded="false" />
+            <element signature="e#6047#6429#0" expanded="false" />
+            <element signature="e#6545#6684#0" expanded="false" />
+            <element signature="e#6793#7155#0" expanded="false" />
+            <element signature="e#7265#7469#0" expanded="false" />
+            <element signature="e#7576#7685#0" expanded="false" />
+            <element signature="e#7788#8004#0" expanded="false" />
+            <element signature="e#8115#8362#0" expanded="false" />
+            <element signature="e#8478#8871#0" expanded="false" />
+            <element signature="e#8989#9223#0" expanded="false" />
+            <element signature="e#9333#9488#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1057,22 +1074,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tecqii/crawler.py">
+    <entry file="file://$PROJECT_DIR$/tecqii/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#611#765#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="549">
+          <caret line="54" column="36" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tecqii/models.py">
+    <entry file="file://$PROJECT_DIR$/tecqii/crawler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="699">
-          <caret line="54" column="12" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="12" />
-          <folding />
+        <state relative-caret-position="489">
+          <caret line="78" column="35" selection-start-line="78" selection-start-column="35" selection-end-line="78" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#645#799#0" expanded="false" />
+            <element signature="e#4040#11141#0" expanded="false" />
+            <element signature="e#4685#4818#0" expanded="false" />
+            <element signature="e#4928#5305#0" expanded="false" />
+            <element signature="e#5415#5566#0" expanded="false" />
+            <element signature="e#5679#5934#0" expanded="false" />
+            <element signature="e#6047#6429#0" expanded="false" />
+            <element signature="e#6545#6684#0" expanded="false" />
+            <element signature="e#6793#7155#0" expanded="false" />
+            <element signature="e#7265#7469#0" expanded="false" />
+            <element signature="e#7576#7685#0" expanded="false" />
+            <element signature="e#7788#8004#0" expanded="false" />
+            <element signature="e#8115#8362#0" expanded="false" />
+            <element signature="e#8478#8871#0" expanded="false" />
+            <element signature="e#8989#9223#0" expanded="false" />
+            <element signature="e#9333#9488#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
