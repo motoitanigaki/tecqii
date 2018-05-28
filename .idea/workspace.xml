@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d83b0ff0-a97e-4bd4-a5e0-f16611d415fd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tecqii/crawler.py" afterPath="$PROJECT_DIR$/tecqii/crawler.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tecqii/models.py" afterPath="$PROJECT_DIR$/tecqii/models.py" />
     </list>
     <ignored path="tecqii.iws" />
@@ -108,8 +107,8 @@
           <file leaf-file-name="crawler.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/tecqii/crawler.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="420">
-                  <caret line="74" column="26" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="26" />
+                <state relative-caret-position="285">
+                  <caret line="54" column="20" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
                   <folding>
                     <element signature="e#0#9#0" expanded="true" />
                     <element signature="e#611#765#0" expanded="false" />
@@ -173,7 +172,7 @@
             <entry file="file://$PROJECT_DIR$/tecqii/models.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="699">
-                  <caret line="54" column="10" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="10" />
+                  <caret line="54" column="12" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="12" />
                   <folding />
                 </state>
               </provider>
@@ -213,8 +212,8 @@
         <option value="$PROJECT_DIR$/tecqii/settings_base.py" />
         <option value="$PROJECT_DIR$/tecqii/management/commands/get_items.py" />
         <option value="$PROJECT_DIR$/tecqii/management/commands/crawl_users_qiita.py" />
-        <option value="$PROJECT_DIR$/tecqii/models.py" />
         <option value="$PROJECT_DIR$/tecqii/crawler.py" />
+        <option value="$PROJECT_DIR$/tecqii/models.py" />
       </list>
     </option>
   </component>
@@ -679,20 +678,6 @@
           <folding>
             <element signature="e#0#9#0" expanded="true" />
             <element signature="e#611#765#0" expanded="false" />
-            <element signature="e#4524#4657#0" expanded="false" />
-            <element signature="e#4767#5144#0" expanded="false" />
-            <element signature="e#5254#5405#0" expanded="false" />
-            <element signature="e#5518#5773#0" expanded="false" />
-            <element signature="e#5886#6268#0" expanded="false" />
-            <element signature="e#6384#6523#0" expanded="false" />
-            <element signature="e#6632#6994#0" expanded="false" />
-            <element signature="e#7104#7308#0" expanded="false" />
-            <element signature="e#7415#7524#0" expanded="false" />
-            <element signature="e#7627#7843#0" expanded="false" />
-            <element signature="e#7954#8201#0" expanded="false" />
-            <element signature="e#8317#8710#0" expanded="false" />
-            <element signature="e#8828#9062#0" expanded="false" />
-            <element signature="e#9172#9327#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1054,14 +1039,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tecqii/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="699">
-          <caret line="54" column="10" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tecqii/management/commands/get_users.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -1082,26 +1059,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tecqii/crawler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="74" column="26" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="26" />
+        <state relative-caret-position="460">
+          <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
             <element signature="e#611#765#0" expanded="false" />
-            <element signature="e#4524#4657#0" expanded="false" />
-            <element signature="e#4767#5144#0" expanded="false" />
-            <element signature="e#5254#5405#0" expanded="false" />
-            <element signature="e#5518#5773#0" expanded="false" />
-            <element signature="e#5886#6268#0" expanded="false" />
-            <element signature="e#6384#6523#0" expanded="false" />
-            <element signature="e#6632#6994#0" expanded="false" />
-            <element signature="e#7104#7308#0" expanded="false" />
-            <element signature="e#7415#7524#0" expanded="false" />
-            <element signature="e#7627#7843#0" expanded="false" />
-            <element signature="e#7954#8201#0" expanded="false" />
-            <element signature="e#8317#8710#0" expanded="false" />
-            <element signature="e#8828#9062#0" expanded="false" />
-            <element signature="e#9172#9327#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tecqii/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="699">
+          <caret line="54" column="12" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
