@@ -36,7 +36,6 @@ class Command(BaseCommand):
 
             for contribution in tag_contribution_count:
                 tag = Tag.objects.get(tag_id=contribution[0])
-                print(contribution[1])
                 UserTagRelation.objects.update_or_create(
                     user=user,
                     tag=tag,

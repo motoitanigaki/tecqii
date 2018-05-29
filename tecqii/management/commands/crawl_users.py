@@ -18,4 +18,4 @@ class Command(BaseCommand):
             page = i + 1
             crawler.crawl_qiita_user_ranking(page)
         crawler.tear_down()
-        print('finished.')
+
