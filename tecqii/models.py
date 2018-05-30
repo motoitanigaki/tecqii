@@ -10,6 +10,7 @@ class Tag(models.Model):
     def __str__(self):
         return str(self.tag_id)
 
+
 class User(models.Model):
     description = models.TextField(max_length=1024, blank=True, db_index=True) # 自己紹介文
     facebook_id = models.CharField(max_length=128, blank=True, default='') # Facebook ID
@@ -30,6 +31,7 @@ class User(models.Model):
 
     def __str__(self):
         return str(self.user_id)
+
 
 class Item(models.Model):
     rendered_body = models.CharField(max_length=1048576, blank=True, null=True)
@@ -52,6 +54,7 @@ class Item(models.Model):
     def __str__(self):
         return str(self.item_id)
 
+
 class UserTagRelation(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     tag = models.ForeignKey(Tag, on_delete=models.CASCADE)
@@ -63,3 +66,13 @@ class UserTagRelation(models.Model):
 
     def __str__(self):
         return str(self.user.user_id)
+
+
+class UserKeyword(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    keyword = models.CharField(max_length=128)
+    weight = models.FloatField(default=0)
+
+    class Meta:
+        unique_together = ('user', 'keyword')
+

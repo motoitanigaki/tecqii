@@ -42,6 +42,7 @@ class Crawler():
             print('loading took too much time')
             return False
 
+    # calls the internal api
     def crawl_qiita_users(self, char='A', page=1):
         QIITA_USERS_URL = 'https://qiita.com/users'
         QIITA_INTERNALAPI_HOVERCARD = 'https://qiita.com/api/internal/hovercard_users/'
@@ -92,6 +93,34 @@ class Crawler():
                 except URLError:
                     print('URLError. will wait 1 minute.')
                     time.sleep(60)
+            try:
+                self.driver.find_element_by_xpath('//*[@id="main"]/div/div/div[2]/div[101]/ul/li[2]/a')
+            except NoSuchElementException:
+                print('no next button, will switch to next char.')
+                return False
+            except:
+                print(sys.exc_info()[1])
+            else:
+                return True
+
+    # not call the internal api
+    def crawl_qiita_users_light(self, char='A', page=1):
+        QIITA_USERS_URL = 'https://qiita.com/users'
+        try:
+            print('char: ', char, 'page: ', page)
+            self.driver.get(QIITA_USERS_URL + '?char=' + char + '&page=' + str(page))
+            WebDriverWait(self.driver, 30).until(EC.presence_of_element_located((By.XPATH, '//*[@id="main"]/div/div/div[1]/h2')))
+        except TimeoutException:
+            print('loading took too much time')
+        else:
+            time.sleep(1)
+            user_ids = self.driver.find_elements_by_xpath('//*[@id="main"]/div/div/div[2]/div[*]/div/div/p[1]/a')
+            # time.sleep(10)
+            for user_id in user_ids:
+                user = User.objects.update_or_create(
+                    user_id=user_id.text.strip()
+                )
+                print(user)
             try:
                 self.driver.find_element_by_xpath('//*[@id="main"]/div/div/div[2]/div[101]/ul/li[2]/a')
             except NoSuchElementException:

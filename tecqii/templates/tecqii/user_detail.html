@@ -1,0 +1,80 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+
+{% load humanize %}
+
+{% load url_replace %}
+
+{% block head_title %}エンジニアランキング{% endblock %}
+
+{% block body_class %}{% endblock %}
+
+{% block body_base %}
+
+    <style>
+        @media (min-width: 768px){
+            .mobile {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .pc {
+                display: none;
+            }
+        }
+
+    </style>
+
+    <div class="container">
+        <div class="card mt-4">
+            <div class="row m-0">
+                <div class="col-md-2  col-6 p-0">
+                    <img class="w-100 img-thumbnail border-0 p-0" src="{{ object.profile_image_url }}">
+                </div>
+                <div class="col-md-3 col-6 p-3">
+                    <h1 class="h4">{{ object.name }}</h1>
+                    <h2 class="h4">@{{ object.user_id }}</h2>
+                    <p class="small mb-1">組織　：　{{ object.organization }}</p>
+                    <p class="small mb-1">居住地：　{{ object.location }}</p>
+                    <p class="small mb-0 pc">URL  ：　<a href="{{ object.website_url }}">{{ object.website_url }}</a></p>
+                </div>
+                <div class="col-md-7 col-12 p-3">
+                    <p class="small mb-1">{{ object.description }}</p>
+                    <p class="small mb-0 mobile"><a href="{{ object.website_url }}">{{ object.website_url }}</a></p>
+                </div>
+            </div>
+            <div class="card-footer bg-white">
+                <div class="row m-0">
+                    <div class="col-md-2 col-0"></div>
+                    <div class="col-md-10 col-12 p-0">
+                        hoge
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-100" style="height: 400px;" id="keywords"></div>
+    </div>
+
+
+
+    <script>
+        var userKeywordsList = (("{{user_keywords|safe}}").replace(/&(l|g|quo)t;/g, function (a, b) {
+            return {
+                l: '<',
+                g: '>',
+                quo: '"'
+            }[b];
+        }));
+        userKeywordsList = userKeywordsList.replace(/u'/g, '\'')
+        userKeywordsList = userKeywordsList.replace(/'/g, '\"')
+        userKeywords = JSON.parse(userKeywordsList);
+        console.log(userKeywords)
+        $('#keywords').jQCloud(userKeywords, {
+{#             colors: ["#266cd8", "#29c272", "#6c9ce6", "#48d3e3"],#}
+             autoResize: true
+        });
+    </script>
+
+{% endblock %}

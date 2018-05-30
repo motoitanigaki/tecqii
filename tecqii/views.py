@@ -1,7 +1,8 @@
+import json
 from django.views.generic import ListView, DetailView
 from django.db.models import Q
-from tecqii.models import Tag, User, Item, UserTagRelation
-
+from django.core.serializers.json import DjangoJSONEncoder
+from tecqii.models import Tag, User, Item, UserTagRelation, UserKeyword
 
 class UserListView(ListView):
     model = User
@@ -56,3 +57,18 @@ class UserListView(ListView):
             )
 
         return query
+
+class UserDetailView(DetailView):
+    model = User
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        user_keywords_list = list()
+        user_keywords = UserKeyword.objects.filter(user=self.object)
+        for user_keyword in user_keywords:
+            user_keywords_dict = dict()
+            user_keywords_dict["text"] = user_keyword.keyword
+            user_keywords_dict["weight"] = user_keyword.weight
+            user_keywords_list.append(user_keywords_dict)
+            context['user_keywords'] = user_keywords_list
+        return context

@@ -52,7 +52,7 @@
                     {#                            <img class="img-thumbnail border-0" style="width:56px;" src="{{ user.profile_image_url }}">#}
                     {#                        </td>#}
                     <td>{{ forloop.counter0|add:page_obj.start_index }}</td>
-                    <td>{{ user.user_id }}</td>
+                    <td>{{ user.id }}</td>
                     <td>{{ user.name|default:"---" }}</td>
                     {% for user_tag_relation in user.usertagrelation_set.all %}
                         {% if user_tag_relation.tag.tag_id|lower == tag|lower %}
@@ -140,35 +140,5 @@
             </div>
         </form>
     </div>
-
-    <div class="w-100" style="height: 150px;" id="keywords"></div>
-
-    <script>
-        var words = [
-            {text: "Lorem", weight: 13, link: 'http://github.com/mistic100/jQCloud'},
-            {text: "Ipsum", weight: 10.5},
-            {text: "Dolor", weight: 9.4},
-            {text: "Sit", weight: 8},
-            {text: "Amet", weight: 6.2},
-            {text: "Consectetur", weight: 5},
-            {text: "Lorem", weight: 13, link: 'http://github.com/mistic100/jQCloud'},
-            {text: "Ipsum", weight: 10.5},
-            {text: "Dolor", weight: 9.4},
-            {text: "Sit", weight: 8},
-            {text: "Amet", weight: 6.2},
-            {text: "Consectetur", weight: 5},
-            {text: "Lorem", weight: 13, link: 'http://github.com/mistic100/jQCloud'},
-            {text: "Ipsum", weight: 10.5},
-            {text: "Dolor", weight: 9.4},
-            {text: "Sit", weight: 8},
-            {text: "Amet", weight: 6.2},
-            {text: "Consectetur", weight: 5},
-            {text: "Adipiscing", weight: 5}
-        ];
-        $('#keywords').jQCloud(words, {
-{#             colors: ["#266cd8", "#48d3e3", "#29c272", "#6c9ce6", "#bfcfd9", "#feb24c", "#fed976", "#ffeda0", "#ffffcc"],#}
-             autoResize: true
-        });
-    </script>
 
 {% endblock %}
