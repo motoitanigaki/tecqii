@@ -31,8 +31,8 @@
           <file leaf-file-name="site_base.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/tecqii/templates/site_base.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="379">
-                  <caret line="64" column="4" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="4" />
+                <state relative-caret-position="139">
+                  <caret line="10" column="55" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
                   <folding />
                 </state>
               </provider>
@@ -1304,8 +1304,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tecqii/templates/site_base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="64" column="4" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="4" />
+        <state relative-caret-position="139">
+          <caret line="10" column="55" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
           <folding />
         </state>
       </provider>
