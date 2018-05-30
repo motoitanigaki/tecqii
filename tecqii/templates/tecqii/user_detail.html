@@ -26,7 +26,7 @@
         }
 
     </style>
-
+<div style="background-color: #fafafa">
     <div class="container">
         <div class="card mt-4">
             <div class="row m-0">
@@ -41,21 +41,55 @@
                     <p class="small mb-0 pc">URL  ：　<a href="{{ object.website_url }}">{{ object.website_url }}</a></p>
                 </div>
                 <div class="col-md-7 col-12 p-3">
+                    <div>
+                        {% if object.twitter_screen_name != '' %}
+                            <a href="https://twitter.com/{{ object.twitter_screen_name }}" target="_blank"><i class="fab fa-twitter fa-lg mb-2 mr-2 text-primary"></i></a>
+                        {% endif %}
+                        {% if object.github_login_name != '' %}
+                            <a href="https://github.com/{{ object.github_login_name }}" target="_blank"><i class="fab fa-github fa-lg mb-2 mr-2 text-primary"></i></a>
+                        {% endif %}
+                        {% if object.facebook_id != '' %}
+                            <a href="https://www.facebook.com/{{ object.facebook_id }}" target="_blank"><i class="fab fa-facebook fa-lg mb-2 mr-2 text-primary"></i></a>
+                        {% endif %}
+                        {% if object.linkedin_id != '' %}
+                            <a href="https://www.linkedin.com/in/{{ object.linkedin_id }}" target="_blank"><i class="fab fa-linkedin-in fa-lg mb-2 text-primary"></i></a>
+                        {% endif %}
+                    </div>
                     <p class="small mb-1">{{ object.description }}</p>
                     <p class="small mb-0 mobile"><a href="{{ object.website_url }}">{{ object.website_url }}</a></p>
                 </div>
             </div>
-            <div class="card-footer bg-white">
-                <div class="row m-0">
+            <div class="card-footer p-0">
+                <div class="row m-0 text-center bg-white">
                     <div class="col-md-2 col-0"></div>
-                    <div class="col-md-10 col-12 p-0">
-                        hoge
+                    <div class="col-md-2 col-6 p-3">
+                        <div class="h5 mb-0">{{ object.contribution_count|intcomma:False }}</div><span class="small">Contributions</span>
                     </div>
+                    <div class="col-md-2 col-6 p-3">
+                        <div class="h5 mb-0">{{ object.items_count|intcomma:False }}</div><span class="small">投稿数</span>
+                    </div>
+                    <div class="col-md-2 col-6 p-3">
+                        <div class="h5 mb-0">{{ object.followers_count|intcomma:False }}</div><span class="small">フォロワー数</span>
+                    </div>
+                    <div class="col-md-2 col-6 p-3">
+                        <div class="h5 mb-0">{{ object.followees_count|intcomma:False }}</div><span class="small">フォローしている数</span>
+                    </div>
+                    <div class="col-md-2 col-0"></div>
                 </div>
             </div>
         </div>
-        <div class="w-100" style="height: 400px;" id="keywords"></div>
+
+        <div class="card mt-4">
+            <div class="card-header bg-white">タグ一覧</div>
+            <canvas class="m-3" id="bar-chart" height="267"></canvas>
+        </div>
+
+        <div class="card mt-4">
+            <div class="card-header bg-white">キーワード</div>
+            <div class="w-100" style="height: 267px;" id="keywords"></div>
+        </div>
     </div>
+</div>
 
 
 
@@ -74,6 +108,26 @@
         $('#keywords').jQCloud(userKeywords, {
 {#             colors: ["#266cd8", "#29c272", "#6c9ce6", "#48d3e3"],#}
              autoResize: true
+        });
+
+        new Chart(document.getElementById("bar-chart"), {
+            type: 'bar',
+            data: {
+                labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
+                datasets: [
+                    {
+                        label: "Population (millions)",
+                        backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850"],
+                        data: [200, 526, 734, 784, 433]
+                    }
+                ]
+            },
+            options: {
+                legend: {display: false},
+                title: {
+                    display: true,
+                }
+            }
         });
     </script>
 

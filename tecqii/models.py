@@ -14,8 +14,8 @@ class Tag(models.Model):
 class User(models.Model):
     description = models.TextField(max_length=1024, blank=True, db_index=True) # 自己紹介文
     facebook_id = models.CharField(max_length=128, blank=True, default='') # Facebook ID
-    followees_count = models.IntegerField(default=0, db_index=True) # このユーザをフォローしているユーザの数
-    followers_count = models.IntegerField(default=0, db_index=True) # このユーザがフォローしているユーザの数
+    followees_count = models.IntegerField(default=0, db_index=True) # このユーザがフォローしているユーザの数
+    followers_count = models.IntegerField(default=0, db_index=True) # このユーザをフォローしているユーザの数
     github_login_name = models.CharField(max_length=128, blank=True, default='') # GitHub ID
     user_id = models.CharField(max_length=128, unique=True) # ユーザID
     items_count = models.IntegerField(default=0, db_index=True) # このユーザが qiita.com 上で公開している投稿の数
