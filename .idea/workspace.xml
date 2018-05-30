@@ -28,16 +28,6 @@
     <splitter split-orientation="horizontal" split-proportion="0.59810317">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="query.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/../tecqii_env/lib/python3.6/site-packages/django/db/models/query.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="7005">
-                  <caret line="490" column="8" selection-start-line="490" selection-start-column="8" selection-end-line="490" selection-end-column="8" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="core.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/../tecqii_env/lib/python3.6/site-packages/termextract/core.py">
               <provider selected="true" editor-type-id="text-editor">
@@ -73,8 +63,18 @@
           <file leaf-file-name="site_base.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/tecqii/templates/site_base.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="421">
-                  <caret line="60" column="14" selection-start-line="60" selection-start-column="14" selection-end-line="60" selection-end-column="14" />
+                <state relative-caret-position="300">
+                  <caret line="20" column="36" selection-start-line="15" selection-start-column="0" selection-end-line="20" selection-end-column="36" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/.gitignore">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="90">
+                  <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
                   <folding />
                 </state>
               </provider>
@@ -254,7 +254,6 @@
       <list>
         <option value="$PROJECT_DIR$/tecqii/settings.py" />
         <option value="$PROJECT_DIR$/tecqii/wsgi.py" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/secrets.json" />
         <option value="$PROJECT_DIR$/manage.py" />
         <option value="$PROJECT_DIR$/tecqii/settings_local.py" />
@@ -282,6 +281,7 @@
         <option value="$PROJECT_DIR$/tecqii/urls.py" />
         <option value="$PROJECT_DIR$/tecqii/templates/tecqii/user_list.html" />
         <option value="$PROJECT_DIR$/tecqii/templates/tecqii/user_detail.html" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/tecqii/templates/site_base.html" />
       </list>
     </option>
@@ -841,7 +841,7 @@
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10170394" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15495208" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -897,13 +897,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tecqii/settings_local.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/requirements-account.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1287,10 +1280,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tecqii/templates/site_base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="60" column="14" selection-start-line="60" selection-start-column="14" selection-end-line="60" selection-end-column="14" />
+        <state relative-caret-position="300">
+          <caret line="20" column="36" selection-start-line="15" selection-start-column="0" selection-end-line="20" selection-end-column="36" />
           <folding />
         </state>
       </provider>
