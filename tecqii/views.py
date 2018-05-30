@@ -63,6 +63,7 @@ class UserDetailView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+
         user_keywords_list = list()
         user_keywords = UserKeyword.objects.filter(user=self.object)
         for user_keyword in user_keywords:
@@ -71,4 +72,23 @@ class UserDetailView(DetailView):
             user_keywords_dict["weight"] = user_keyword.weight
             user_keywords_list.append(user_keywords_dict)
             context['user_keywords'] = user_keywords_list
+
+        # user_tag_relations_list = list()
+        # user_tag_relations = UserTagRelation.objects.filter(user=self.object)
+        # for user_tag_relation in user_tag_relations:
+        #     user_tag_relations_dict = dict()
+        #     user_tag_relations_dict["tag"] = user_tag_relation.tag.tag_id
+        #     user_tag_relations_dict["items_count"] = user_tag_relation.items_count
+        #     user_tag_relations_list.append(user_tag_relations_dict)
+        #     context['user_tag_relations'] = user_tag_relations_list
+        user_tag_relations = UserTagRelation.objects.filter(user=self.object).order_by('items_count').reverse()
+        user_tag_relation_labels = []
+        user_tag_relation_tags = []
+        for user_tag_relation in user_tag_relations:
+            user_tag_relation_labels.append(user_tag_relation.tag.tag_id)
+            user_tag_relation_tags.append(user_tag_relation.items_count)
+        json_user_tag_relation_labels = json.dumps(user_tag_relation_labels)
+        json_user_tag_relation_tags = json.dumps(user_tag_relation_tags)
+        context['user_tag_relation_labels'] = json_user_tag_relation_labels
+        context['user_tag_relation_tags'] = json_user_tag_relation_tags
         return context

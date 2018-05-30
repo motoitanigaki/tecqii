@@ -13,7 +13,7 @@ urlpatterns = [
     path("", UserListView.as_view(), name="home"),
     path("admin/", admin.site.urls),
     path("account/", include("account.urls")),
-    url(r'^user/(?P<pk>[^/]+)', UserDetailView.as_view(), name="home"),
+    url(r'^user/(?P<pk>[^/]+)', UserDetailView.as_view(), name="user-detail"),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -12,82 +12,81 @@
 
 {% block body_base %}
 
-    <div class="container">
-        <div class="ht-tm-codeblock ht-tm-btn-replaceable">
-            <form class="pl-5 pr-5 pt-4 pb-4">
-                <label class="sr-only" for="inlineFormInputGroup">Username</label>
-                <div class="row">
-                    <div class="input-group col-11">
-                        <input type="text" class="form-control p-2" id="inlineFormInputGroup" name="tag" placeholder="タグからユーザーを検索できます 例）JavaScript" {% if tag != None %} value="{{ tag }}"{% endif %}>
+    <div style="background-color: #fafafa">
+        <div class="container">
+                <form class="pt-4 pb-4">
+                    <label class="sr-only" for="inlineFormInputGroup">Username</label>
+                    <div class="row mr-0">
+                        <div class="input-group col-10">
+                            <input type="text" class="form-control p-2" id="inlineFormInputGroup" name="tag" placeholder="タグでユーザーを検索 例）Python" {% if tag != None %} value="{{ tag }}"{% endif %}>
+                        </div>
+                        <button type="button" class="btn btn-info col-2 p-2" data-toggle="modal" data-target="#searchModal">
+                            <i class="fa fa-angle-down fa-lg"></i>
+                        </button>
                     </div>
-                    <button type="button" class="btn btn-info col-1 p-2" data-toggle="modal" data-target="#searchModal">
-                        <i class="fa fa-angle-down fa-lg"></i>
-                    </button>
-                </div>
-            </form>
-        </div>
-        <table class="table table-responsive-sm">
-            <thead>
-                <tr>
-                    <th></th>
-                    <th>ID</th>
-                    <th>名前</th>
-                    {% if tag != None and tag != '' %}
-                        <th>{{ tag }}のContributions</th>
-                    {% endif %}
-                    <th>全てのContributions</th>
-                    <th>フォロワー</th>
-                    <th>投稿</th>
-                    {% if keyword != None and keyword != '' %}
-                        <th>所属</th>
-                        <th>居住地</th>
-                        <th>自己紹介</th>
-                    {% endif %}
-                </tr>
-            </thead>
-            <tbody>
-            {% for user in object_list %}
-                <tr>
-                    {#                        <td class="p-0">#}
-                    {#                            <img class="img-thumbnail border-0" style="width:56px;" src="{{ user.profile_image_url }}">#}
-                    {#                        </td>#}
-                    <td>{{ forloop.counter0|add:page_obj.start_index }}</td>
-                    <td>{{ user.id }}</td>
-                    <td>{{ user.name|default:"---" }}</td>
-                    {% for user_tag_relation in user.usertagrelation_set.all %}
-                        {% if user_tag_relation.tag.tag_id|lower == tag|lower %}
-                            <td class="text-right">{{ user_tag_relation.contribution_count|intcomma:False }}</td>
+                </form>
+            <table class="table table-responsive-sm bg-white">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>ID</th>
+                        <th>名前</th>
+                        {% if tag != None and tag != '' %}
+                            <th>{{ tag }}のContributions</th>
                         {% endif %}
-                    {% endfor %}
-                    <td class="text-right">{{ user.contribution_count|intcomma:False }}</td>
-                    <td class="text-right">{{ user.followees_count|intcomma:False }}</td>
-                    <td class="text-right">{{ user.items_count|intcomma:False }}</td>
-                    {% if keyword != None and keyword != '' %}
-                        <td>{{ user.organization|default:"---"  }}</td>
-                        <td>{{ user.location|default:"---"  }}</td>
-                        <td class="">{{ user.description|default:"---"|truncatechars:50  }}</td>
+                        <th>全てのContributions</th>
+                        <th>フォロワー</th>
+                        <th>投稿</th>
+                        {% if keyword != None and keyword != '' %}
+                            <th>所属</th>
+                            <th>居住地</th>
+                            <th>自己紹介</th>
+                        {% endif %}
+                    </tr>
+                </thead>
+                <tbody>
+                {% for user in object_list %}
+                    <tr>
+                        {#                        <td class="p-0">#}
+                        {#                            <img class="img-thumbnail border-0" style="width:56px;" src="{{ user.profile_image_url }}">#}
+                        {#                        </td>#}
+                        <td>{{ forloop.counter0|add:page_obj.start_index }}</td>
+                        <td><a href="{% url 'user-detail' user.id %}">{{ user.user_id }}</a></td>
+                        <td>{{ user.name|default:"---" }}</td>
+                        {% for user_tag_relation in user.usertagrelation_set.all %}
+                            {% if user_tag_relation.tag.tag_id|lower == tag|lower %}
+                                <td class="text-right">{{ user_tag_relation.contribution_count|intcomma:False }}</td>
+                            {% endif %}
+                        {% endfor %}
+                        <td class="text-right">{{ user.contribution_count|intcomma:False }}</td>
+                        <td class="text-right">{{ user.followees_count|intcomma:False }}</td>
+                        <td class="text-right">{{ user.items_count|intcomma:False }}</td>
+                        {% if keyword != None and keyword != '' %}
+                            <td>{{ user.organization|default:"---"  }}</td>
+                            <td>{{ user.location|default:"---"  }}</td>
+                            <td class="">{{ user.description|default:"---"|truncatechars:50  }}</td>
+                        {% endif %}
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            {% if is_paginated %}
+                <div class="pagination mb-3">
+                <span class="step-link">
+                    {% if page_obj.has_previous %}
+                        <a class="btn btn-sm" href="?{% url_replace page=page_obj.previous_page_number %}">前ページ</a>
                     {% endif %}
-                </tr>
-            {% endfor %}
-            </tbody>
-        </table>
-        {% if is_paginated %}
-            <div class="pagination mb-3">
-            <span class="step-link">
-                {% if page_obj.has_previous %}
-                    <a class="btn btn-sm" href="?{% url_replace page=page_obj.previous_page_number %}">前ページ</a>
-                {% endif %}
-                <span class="page-current">
-                    {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}
+                    <span class="page-current">
+                        {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}
+                    </span>
+                    {% if page_obj.has_next %}
+                        <a class="btn btn-sm" href="?{% url_replace page=page_obj.next_page_number %}">次ページ</a>
+                    {% endif %}
                 </span>
-                {% if page_obj.has_next %}
-                    <a class="btn btn-sm" href="?{% url_replace page=page_obj.next_page_number %}">次ページ</a>
-                {% endif %}
-            </span>
-            </div>
-        {% endif %}
+                </div>
+            {% endif %}
+        </div>
     </div>
-
 
         <!-- sarchModal -->
     <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -102,7 +101,7 @@
                         <div class="form-group">
                             <label>タグ</label>
                             <input class="form-control" type="text" name="tag" class="form-control"
-                                   placeholder="例）JavaScript、Python"
+                                   placeholder="例）Python、JavaScript"
                                     {% if tag != None %} value="{{ tag }}"{% endif %}>
                         </div>
                         <div class="form-group">

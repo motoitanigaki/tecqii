@@ -26,75 +26,96 @@
         }
 
     </style>
-<div style="background-color: #fafafa">
-    <div class="container">
-        <div class="card mt-4">
-            <div class="row m-0">
-                <div class="col-md-2  col-6 p-0">
-                    <img class="w-100 img-thumbnail border-0 p-0" src="{{ object.profile_image_url }}">
-                </div>
-                <div class="col-md-3 col-6 p-3">
-                    <h1 class="h4">{{ object.name }}</h1>
-                    <h2 class="h4">@{{ object.user_id }}</h2>
-                    <p class="small mb-1">組織　：　{{ object.organization }}</p>
-                    <p class="small mb-1">居住地：　{{ object.location }}</p>
-                    <p class="small mb-0 pc">URL  ：　<a href="{{ object.website_url }}">{{ object.website_url }}</a></p>
-                </div>
-                <div class="col-md-7 col-12 p-3">
-                    <div>
-                        {% if object.twitter_screen_name != '' %}
-                            <a href="https://twitter.com/{{ object.twitter_screen_name }}" target="_blank"><i class="fab fa-twitter fa-lg mb-2 mr-2 text-primary"></i></a>
-                        {% endif %}
-                        {% if object.github_login_name != '' %}
-                            <a href="https://github.com/{{ object.github_login_name }}" target="_blank"><i class="fab fa-github fa-lg mb-2 mr-2 text-primary"></i></a>
-                        {% endif %}
-                        {% if object.facebook_id != '' %}
-                            <a href="https://www.facebook.com/{{ object.facebook_id }}" target="_blank"><i class="fab fa-facebook fa-lg mb-2 mr-2 text-primary"></i></a>
-                        {% endif %}
-                        {% if object.linkedin_id != '' %}
-                            <a href="https://www.linkedin.com/in/{{ object.linkedin_id }}" target="_blank"><i class="fab fa-linkedin-in fa-lg mb-2 text-primary"></i></a>
-                        {% endif %}
+
+    <div style="background-color: #fafafa">
+        <div class="container">
+            <div class="card mt-4">
+                <div class="row m-0">
+                    <div class="col-md-2  col-6 p-0">
+                        <img class="w-100 img-thumbnail border-0 p-0" src="{{ object.profile_image_url }}">
                     </div>
-                    <p class="small mb-1">{{ object.description }}</p>
-                    <p class="small mb-0 mobile"><a href="{{ object.website_url }}">{{ object.website_url }}</a></p>
+                    <div class="col-md-3 col-6 p-3">
+                        <h1 class="h4">{{ object.name }}</h1>
+                        <h2 class="h4">@{{ object.user_id }}</h2>
+                        <p class="small mb-1">組織　：　{{ object.organization|default:"---"  }}</p>
+                        <p class="small mb-1">居住地：　{{ object.location|default:"---"  }}</p>
+                        <p class="small mb-0 pc">URL  ：　<a href="{{ object.website_url }}">{{ object.website_url|default:""  }}</a></p>
+                    </div>
+                    <div class="col-md-7 col-12 p-3">
+                        <div>
+                            {% if object.twitter_screen_name != '' %}
+                                <a href="https://twitter.com/{{ object.twitter_screen_name }}" target="_blank"><i class="fab fa-twitter fa-lg mb-2 mr-2 text-primary"></i></a>
+                            {% endif %}
+                            {% if object.github_login_name != '' %}
+                                <a href="https://github.com/{{ object.github_login_name }}" target="_blank"><i class="fab fa-github fa-lg mb-2 mr-2 text-primary"></i></a>
+                            {% endif %}
+                            {% if object.facebook_id != '' %}
+                                <a href="https://www.facebook.com/{{ object.facebook_id }}" target="_blank"><i class="fab fa-facebook fa-lg mb-2 mr-2 text-primary"></i></a>
+                            {% endif %}
+                            {% if object.linkedin_id != '' %}
+                                <a href="https://www.linkedin.com/in/{{ object.linkedin_id }}" target="_blank"><i class="fab fa-linkedin-in fa-lg mb-2 text-primary"></i></a>
+                            {% endif %}
+                        </div>
+                        <p class="small mb-1">{{ object.description }}</p>
+                        <p class="small mb-0 mobile"><a href="{{ object.website_url }}">{{ object.website_url }}</a></p>
+                    </div>
+                </div>
+                <div class="card-footer p-0">
+                    <div class="row m-0 text-center bg-white">
+                        <div class="col-md-2 col-0"></div>
+                        <div class="col-md-2 col-6 p-3">
+                            <div class="h5 mb-0">{{ object.contribution_count|intcomma:False }}</div><span class="small">Contributions</span>
+                        </div>
+                        <div class="col-md-2 col-6 p-3">
+                            <div class="h5 mb-0">{{ object.items_count|intcomma:False }}</div><span class="small">投稿数</span>
+                        </div>
+                        <div class="col-md-2 col-6 p-3">
+                            <div class="h5 mb-0">{{ object.followers_count|intcomma:False }}</div><span class="small">フォロワー数</span>
+                        </div>
+                        <div class="col-md-2 col-6 p-3">
+                            <div class="h5 mb-0">{{ object.followees_count|intcomma:False }}</div><span class="small">フォローしている数</span>
+                        </div>
+                        <div class="col-md-2 col-0"></div>
+                    </div>
                 </div>
             </div>
-            <div class="card-footer p-0">
-                <div class="row m-0 text-center bg-white">
-                    <div class="col-md-2 col-0"></div>
-                    <div class="col-md-2 col-6 p-3">
-                        <div class="h5 mb-0">{{ object.contribution_count|intcomma:False }}</div><span class="small">Contributions</span>
-                    </div>
-                    <div class="col-md-2 col-6 p-3">
-                        <div class="h5 mb-0">{{ object.items_count|intcomma:False }}</div><span class="small">投稿数</span>
-                    </div>
-                    <div class="col-md-2 col-6 p-3">
-                        <div class="h5 mb-0">{{ object.followers_count|intcomma:False }}</div><span class="small">フォロワー数</span>
-                    </div>
-                    <div class="col-md-2 col-6 p-3">
-                        <div class="h5 mb-0">{{ object.followees_count|intcomma:False }}</div><span class="small">フォローしている数</span>
-                    </div>
-                    <div class="col-md-2 col-0"></div>
-                </div>
+
+            <div class="card mt-4">
+                <div class="card-header bg-white">タグ一覧</div>
+                <canvas class="m-3" id="bar-chart" height="267"></canvas>
             </div>
-        </div>
 
-        <div class="card mt-4">
-            <div class="card-header bg-white">タグ一覧</div>
-            <canvas class="m-3" id="bar-chart" height="267"></canvas>
-        </div>
-
-        <div class="card mt-4">
-            <div class="card-header bg-white">キーワード</div>
-            <div class="w-100" style="height: 267px;" id="keywords"></div>
+            <div class="card mt-4">
+                <div class="card-header bg-white">キーワード</div>
+                <div class="w-100" style="height: 267px;" id="keywords"></div>
+            </div>
         </div>
     </div>
-</div>
 
 
 
     <script>
-        var userKeywordsList = (("{{user_keywords|safe}}").replace(/&(l|g|quo)t;/g, function (a, b) {
+        new Chart(document.getElementById("bar-chart"), {
+            type: 'bar',
+            data: {
+                labels: {{ user_tag_relation_labels|safe }},
+                datasets: [
+                    {
+                        label: "Population (millions)",
+                        backgroundColor: "#6c9ce6",
+                        data: {{ user_tag_relation_tags|safe }}
+                    }
+                ]
+            },
+            options: {
+                legend: {display: false},
+                title: {
+                    display: true,
+                }
+            }
+        });
+
+            var userKeywordsList = (("{{user_keywords|safe}}").replace(/&(l|g|quo)t;/g, function (a, b) {
             return {
                 l: '<',
                 g: '>',
@@ -106,28 +127,8 @@
         userKeywords = JSON.parse(userKeywordsList);
         console.log(userKeywords)
         $('#keywords').jQCloud(userKeywords, {
-{#             colors: ["#266cd8", "#29c272", "#6c9ce6", "#48d3e3"],#}
+             colors: ["#266cd8", "#29c272", "#6c9ce6", "#48d3e3"],
              autoResize: true
-        });
-
-        new Chart(document.getElementById("bar-chart"), {
-            type: 'bar',
-            data: {
-                labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
-                datasets: [
-                    {
-                        label: "Population (millions)",
-                        backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850"],
-                        data: [200, 526, 734, 784, 433]
-                    }
-                ]
-            },
-            options: {
-                legend: {display: false},
-                title: {
-                    display: true,
-                }
-            }
         });
     </script>
 
