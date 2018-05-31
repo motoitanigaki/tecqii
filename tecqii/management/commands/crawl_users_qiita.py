@@ -37,7 +37,7 @@ class Command(BaseCommand):
                 while has_next_page:
                     has_next_page = crawler.crawl_qiita_users(char, page)
                     page += 1
-                    
+
                     json_data["char"] = char
                     json_data["page"] = page
                     print(json_data)
