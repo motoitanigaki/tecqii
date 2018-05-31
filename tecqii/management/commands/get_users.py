@@ -92,11 +92,14 @@ class Command(BaseCommand):
                 print(user.user_id,' deleted.')
             else:
                 response_json = response.to_json()
+                description = response_json['description']
                 facebook_id = response_json['facebook_id']
                 github_login_name = response_json['github_login_name']
                 linkedin_id = response_json['linkedin_id']
                 twitter_screen_name = response_json['twitter_screen_name']
                 location = response_json['location']
+                if description == None:
+                    description = ''
                 if facebook_id == None:
                     facebook_id = ''
                 if github_login_name == None:
@@ -110,7 +113,7 @@ class Command(BaseCommand):
                 User.objects.update_or_create(
                     user_id = response_json['id'],
                     defaults={
-                        'description': response_json['description'],
+                        'description': description,
                         'facebook_id': facebook_id,
                         'followees_count': response_json['followees_count'],
                         'followers_count': response_json['followers_count'],

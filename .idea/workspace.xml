@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d83b0ff0-a97e-4bd4-a5e0-f16611d415fd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tecqii/management/commands/get_items.py" afterPath="$PROJECT_DIR$/tecqii/management/commands/get_items.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tecqii/management/commands/get_users.py" afterPath="$PROJECT_DIR$/tecqii/management/commands/get_users.py" />
     </list>
     <ignored path="tecqii.iws" />
@@ -196,8 +195,8 @@
           <file leaf-file-name="get_users.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/tecqii/management/commands/get_users.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="461">
-                  <caret line="119" column="44" selection-start-line="119" selection-start-column="44" selection-end-line="119" selection-end-column="44" />
+                <state relative-caret-position="281">
+                  <caret line="115" column="50" selection-start-line="115" selection-start-column="50" selection-end-line="115" selection-end-column="50" />
                   <folding />
                 </state>
               </provider>
@@ -1272,8 +1271,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tecqii/management/commands/get_users.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="119" column="44" selection-start-line="119" selection-start-column="44" selection-end-line="119" selection-end-column="44" />
+        <state relative-caret-position="281">
+          <caret line="115" column="50" selection-start-line="115" selection-start-column="50" selection-end-line="115" selection-end-column="50" />
           <folding />
         </state>
       </provider>
