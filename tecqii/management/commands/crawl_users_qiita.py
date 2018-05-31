@@ -41,7 +41,7 @@ class Command(BaseCommand):
                     json_data["char"] = char
                     json_data["page"] = page
                     print(json_data)
-                    json_file_write = open('crawl_users_qiita.json', 'w')
+                    json_file_write = open('/var/www/cgi-bin/tecqii/crawl_users_qiita.json', 'w')
                     json.dump(json_data, json_file_write, indent=4)
 
         crawler.tear_down()
