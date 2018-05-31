@@ -17,7 +17,7 @@ class Command(BaseCommand):
         crawler = Crawler()
         index = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',
                  'U', 'V', 'W', 'X', 'Y', 'Z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '_']
-        json_file = open("crawl_users_qiita.json", 'r')
+        json_file = open("/var/www/cgi-bin/tecqii/crawl_users_qiita.json", 'r')
         json_data = json.load(json_file)
         first_char = json_data["char"]
         first_page = json_data["page"]
