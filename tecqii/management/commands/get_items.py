@@ -105,28 +105,31 @@ class Command(BaseCommand):
                         auther = item_json['user']['id']
                         auther = User.objects.get(user_id=auther)
 
-                        Item.objects.update_or_create(
-                            item_id = item_json['id'],
-                            defaults={
-                                "rendered_body": item_json['rendered_body'],
-                                "body": item_json['body'],
-                                "comments_count": item_json['comments_count'],
-                                "created_at": created_at,
-                                "likes_count": item_json['likes_count'],
-                                "reactions_count": item_json['reactions_count'],
-                                "title": item_json['title'],
-                                "updated_at": updated_at,
-                                "url": item_json['url'],
-                                "user":auther,
-                            }
-                        )
+                        try:
+                            Item.objects.update_or_create(
+                                item_id = item_json['id'],
+                                defaults={
+                                    "rendered_body": item_json['rendered_body'],
+                                    "body": item_json['body'],
+                                    "comments_count": item_json['comments_count'],
+                                    "created_at": created_at,
+                                    "likes_count": item_json['likes_count'],
+                                    "reactions_count": item_json['reactions_count'],
+                                    "title": item_json['title'],
+                                    "updated_at": updated_at,
+                                    "url": item_json['url'],
+                                    "user":auther,
+                                }
+                            )
 
-                        item = Item.objects.get(item_id=item_json['id'])
-                        tags_json = item_json['tags']
-                        for tag_json in tags_json:
-                            Tag.objects.get_or_create(tag_id=tag_json['name'])
-                            tag = Tag.objects.get(tag_id=tag_json['name'])
-                            item.tags.add(tag)
-                        item.save()
+                            item = Item.objects.get(item_id=item_json['id'])
+                            tags_json = item_json['tags']
+                            for tag_json in tags_json:
+                                Tag.objects.get_or_create(tag_id=tag_json['name'])
+                                tag = Tag.objects.get(tag_id=tag_json['name'])
+                                item.tags.add(tag)
+                            item.save()
+                        except:
+                            print('something happend. see the item_json the system tried to save :',item_json)
         print('finished.')
 

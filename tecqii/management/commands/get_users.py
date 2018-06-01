@@ -3,6 +3,7 @@
 import sys
 import time
 from datetime import date, timedelta, datetime
+from psycopg2 import DataError
 from qiita_v2.client import QiitaClient
 from qiita_v2.response import QiitaResponse
 from django.core.management.base import BaseCommand
@@ -87,7 +88,7 @@ class Command(BaseCommand):
             try:
                 response = client.get_user(id=user.user_id)
             except:
-                print(sys.exc_info()[1])
+                # print(sys.exc_info()[1])
                 User.objects.get(user_id=user.user_id).delete()
                 print(user.user_id,' deleted.')
             else:
@@ -110,24 +111,28 @@ class Command(BaseCommand):
                     twitter_screen_name = ''
                 if location == None:
                     location = ''
-                User.objects.update_or_create(
-                    user_id = response_json['id'],
-                    defaults={
-                        'description': description,
-                        'facebook_id': facebook_id,
-                        'followees_count': response_json['followees_count'],
-                        'followers_count': response_json['followers_count'],
-                        'github_login_name': github_login_name,
-                        'items_count': response_json['items_count'],
-                        'linkedin_id': linkedin_id,
-                        'location': location,
-                        'name': response_json['name'],
-                        'organization': response_json['organization'],
-                        'permanent_id': response_json['permanent_id'],
-                        'profile_image_url': response_json['profile_image_url'],
-                        'twitter_screen_name': twitter_screen_name,
-                        'website_url': response_json['website_url'],
-                    }
-                )
+                try:
+                    User.objects.update_or_create(
+                        user_id = response_json['id'],
+                        defaults={
+                            'description': description,
+                            'facebook_id': facebook_id,
+                            'followees_count': response_json['followees_count'],
+                            'followers_count': response_json['followers_count'],
+                            'github_login_name': github_login_name,
+                            'items_count': response_json['items_count'],
+                            'linkedin_id': linkedin_id,
+                            'location': location,
+                            'name': response_json['name'],
+                            'organization': response_json['organization'],
+                            'permanent_id': response_json['permanent_id'],
+                            'profile_image_url': response_json['profile_image_url'],
+                            'twitter_screen_name': twitter_screen_name,
+                            'website_url': response_json['website_url'],
+                        }
+                    )
+                except: DataError
+                print(user.user_id, ' some field was too long to save.')
+
         print('finished.')
 
