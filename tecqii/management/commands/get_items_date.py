@@ -18,7 +18,7 @@ class Command(BaseCommand):
         print("running get_items_date batch ...")
 
         client = QiitaClient(access_token=settings.QIITA_ACCESS_TOKENS[0])
-        start_date = datetime.strptime('2015-09-25', '%Y-%m-%d')
+        start_date = datetime.strptime('2011-09-16', '%Y-%m-%d')
         today = datetime.today()
         days_15 = timedelta(days=+15)
 
