@@ -69,7 +69,7 @@ class Command(BaseCommand):
                                 }
                             )
                             counter += 1
-                            if counter > 50:
+                            if counter >= 50:
                                 break
                 except OverflowError:
                     print('OverflowError')

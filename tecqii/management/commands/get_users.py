@@ -87,10 +87,10 @@ class Command(BaseCommand):
                 client = QiitaClient(access_token=settings.QIITA_ACCESS_TOKENS[0])
             try:
                 response = client.get_user(id=user.user_id)
-            except:
-                # print(sys.exc_info()[1])
-                User.objects.get(user_id=user.user_id).delete()
-                print(user.user_id,' deleted.')
+            except Exception:
+                print(sys.exc_info()[1])
+                # User.objects.get(user_id=user.user_id).delete()
+                # print(user.user_id,' deleted.')
             else:
                 response_json = response.to_json()
                 description = response_json['description']
