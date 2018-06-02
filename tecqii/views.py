@@ -81,7 +81,7 @@ class UserDetailView(DetailView):
         #     user_tag_relations_dict["items_count"] = user_tag_relation.items_count
         #     user_tag_relations_list.append(user_tag_relations_dict)
         #     context['user_tag_relations'] = user_tag_relations_list
-        user_tag_relations = UserTagRelation.objects.filter(user=self.object).order_by('items_count').reverse()
+        user_tag_relations = UserTagRelation.objects.filter(user=self.object).order_by('items_count').reverse()[:19]
         user_tag_relation_labels = []
         user_tag_relation_tags = []
         for user_tag_relation in user_tag_relations:

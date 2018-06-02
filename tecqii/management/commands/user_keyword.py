@@ -2,6 +2,7 @@ import re
 import collections
 import termextract.japanese_plaintext
 import termextract.core
+import MeCab
 from datetime import datetime
 from django.core.management.base import BaseCommand
 from tecqii.models import Tag, User, Item, UserTagRelation, UserKeyword
@@ -10,6 +11,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         print("Running batch 'user_keyword' ... at: ",datetime.now() )
+        mecab = MeCab.Tagger()
 
         # only those who have ever posted articles
         users = User.objects.filter(items_count__gte=1)
@@ -27,6 +29,20 @@ class Command(BaseCommand):
                             text += char
                         # else:
                         #     text += '、' # still need to keep the splits in articles.
+
+                    words = []
+                    words_parsed = mecab.parse(text)
+                    for row in words_parsed.split("\n"):
+                        word = row.split("\t")[0]
+                        if word == "EOS":
+                            break
+                        else:
+                            pos = row.split("\t")[1].split(",")[0]
+                            if pos == "名詞":
+                                words.append(word)
+                    text = '、'.join(words)
+
+
                 if len(text) > 300000: # if the text length is too long, process stops.
                     text = re.sub(r"、+", "、", text)
                 print('文字列:', len(text))

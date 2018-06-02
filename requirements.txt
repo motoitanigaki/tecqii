@@ -8,7 +8,9 @@ django-appconf==1.0.2
 django-bootstrap-form==3.4
 django-user-accounts==2.0.3
 idna==2.6
+Janome==0.3.6
 jsonfield==2.0.2
+mecab-python3==0.7
 pinax-cli==1.1.4
 pinax-eventlog==2.0.3
 pinax-templates==2.0.1
@@ -20,4 +22,5 @@ PyYAML==3.12
 qiita-v2==0.1.1
 requests==2.18.4
 selenium==3.12.0
+termextract==0.12b0
 urllib3==1.22
