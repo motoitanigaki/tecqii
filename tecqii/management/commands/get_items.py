@@ -14,13 +14,17 @@ from tecqii.models import User, Tag, Item
 
 class Command(BaseCommand):
     def handle(self, *args, **options):
-        print("running get_tags batch ...")
+        print("running get_items batch ...")
 
         client = QiitaClient(access_token=settings.QIITA_ACCESS_TOKEN)
         client = QiitaClient(access_token=settings.QIITA_ACCESS_TOKENS[0])
         users = User.objects.filter(items_count__gte=1) # users who has ever posted
         counter = 0
         for user in users:
+            # skip if the items_count and the item_set.count() is the same.
+            if user.items_count == user.item_set.count():
+                # continue
+                pass
             if counter == 1000:
                 print('1000 calls finished.')
                 client = QiitaClient(access_token=settings.QIITA_ACCESS_TOKENS[1])

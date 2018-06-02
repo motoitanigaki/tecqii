@@ -17,6 +17,7 @@ class Command(BaseCommand):
         client = QiitaClient(access_token=settings.QIITA_ACCESS_TOKEN)
         client = QiitaClient(access_token=settings.QIITA_ACCESS_TOKENS[0])
         users = User.objects.all()
+        User.objects.filter(permanent_id=0)
         counter = 0
         for user in users:
             counter += 1
