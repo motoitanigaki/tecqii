@@ -211,3 +211,10 @@ def get_secret(setting, secrets=secrets):
 
 QIITA_ACCESS_TOKEN = get_secret('QIITA_ACCESS_TOKEN')
 QIITA_ACCESS_TOKENS = get_secret('QIITA_ACCESS_TOKENS')
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+        'LOCATION': '127.0.0.1:11211',
+    }
+}
