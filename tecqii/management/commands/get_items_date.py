@@ -18,7 +18,7 @@ class Command(BaseCommand):
         print("running get_items_date batch ...")
 
         client = QiitaClient(access_token=settings.QIITA_ACCESS_TOKENS[0])
-        start_date = datetime.strptime('2011-09-16', '%Y-%m-%d')
+        start_date = datetime.strptime('2015-09-25', '%Y-%m-%d')
         today = datetime.today()
         days_15 = timedelta(days=+15)
 
@@ -94,6 +94,7 @@ class Command(BaseCommand):
 
                 params = 'page=' + str(i+1) + '&per_page=100' + '&query=created:>=' + start_date.strftime('%Y-%m-%d') + '+created:<' + end_date.strftime('%Y-%m-%d')
                 try:
+                    counter += 1
                     response = client.list_items(params=params)
                 except:
                     print(sys.exc_info()[1])
