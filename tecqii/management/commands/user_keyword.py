@@ -10,7 +10,7 @@ from tecqii.models import Tag, User, Item, UserTagRelation, UserKeyword
 class Command(BaseCommand):
 
     def handle(self, *args, **options):
-        print("Running batch 'user_keyword' ... at: ",datetime.now() )
+        print("Running batch 'user_keyword' ... at: ",datetime.now())
         mecab = MeCab.Tagger()
 
         # only those who have ever posted articles

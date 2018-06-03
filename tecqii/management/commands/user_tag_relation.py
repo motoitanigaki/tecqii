@@ -1,3 +1,4 @@
+from datetime import datetime
 from django.core.management.base import BaseCommand
 from tecqii.models import Tag, User, Item, UserTagRelation
 
@@ -44,4 +45,4 @@ class Command(BaseCommand):
                     }
                 )
 
-        print('finished.')
+        print('finished. at: ', datetime.now())

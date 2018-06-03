@@ -14,10 +14,9 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         print("running get_users batch ...")
 
-        client = QiitaClient(access_token=settings.QIITA_ACCESS_TOKEN)
         client = QiitaClient(access_token=settings.QIITA_ACCESS_TOKENS[0])
         users = User.objects.all()
-        User.objects.filter(permanent_id=0)
+        User.objects.all()
         counter = 0
         for user in users:
             counter += 1
@@ -130,5 +129,5 @@ class Command(BaseCommand):
                         'website_url': response_json['website_url'],
                     }
                 )
-        print('finished.')
+        print('finished. at: ', datetime.now())
 

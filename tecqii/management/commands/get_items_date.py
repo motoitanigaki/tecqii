@@ -138,5 +138,5 @@ class Command(BaseCommand):
                         break
             start_date += days_15
 
-        print('finished.')
+        print('finished. at: ', datetime.now())
 
