@@ -6,9 +6,9 @@
 
 
 {% block styles %}
-    <link href="http://mtitg.com/tecqii/site-media/css/app.css" rel="stylesheet" />
-    <link href="http://mtitg.com/tecqii/site-media/css/bootstrap4-business-tycoon.min.css" rel="stylesheet" />
-    <link href="http://mtitg.com/tecqii/site-media/css/jqcloud.min.css" rel="stylesheet" type="text/css">
+    <link href="https://mtitg.com/tecqii/site-media/css/app.css" rel="stylesheet" />
+    <link href="https://mtitg.com/tecqii/site-media/css/bootstrap4-business-tycoon.min.css" rel="stylesheet" />
+    <link href="https://mtitg.com/tecqii/site-media/css/jqcloud.min.css" rel="stylesheet" type="text/css">
 {#    <link href="{% static "css/app.css" %}" rel="stylesheet" />#}
 {#    <link href="{% static "css/bootstrap4-business-tycoon.min.css" %}" rel="stylesheet" />#}
 {#    <link href="{% static "css/jqcloud.min.css" %}" rel="stylesheet" type="text/css">#}
@@ -21,7 +21,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-    <script src="http://mtitg.com/tecqii/site-media/js/jqcloud.min.js"></script>
+    <script src="https://mtitg.com/tecqii/site-media/js/jqcloud.min.js"></script>
 {#    <script src="{% static "js/jqcloud.min.js" %}"></script>#}
     {% block extra_head %}{% endblock %}
 {% endblock %}
@@ -61,11 +61,22 @@
 
 
 {% block scripts %}
-    <script src="http://mtitg.com/tecqii/site-media/js/site.js"></script>
+    <script src="https://mtitg.com/tecqii/site-media/js/site.js"></script>
 {#    <script src="{% static "js/site.js" %}"></script>#}
 {% endblock %}
 
 {% block extra_body_base %}
     {% analytics %}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120265858-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-120265858-1');
+    </script>
     {% block extra_body %}{% endblock %}
 {% endblock %}

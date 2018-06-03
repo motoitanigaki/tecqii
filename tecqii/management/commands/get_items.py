@@ -92,7 +92,6 @@ class Command(BaseCommand):
             call_count = math.ceil(user.items_count/100)
             for page in range(call_count):
                 try:
-                    print('user_id: ', user.user_id, ' page: ', page + 1)
                     counter += 1
                     response = client.list_user_items(user_id=user.user_id, params='page='+str(page + 1)+'&per_page=100&sort=count')
                 except:

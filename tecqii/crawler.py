@@ -81,7 +81,6 @@ class Crawler():
                             'profile_image_url': hover_card_json['profile_image_url']
                         }
                     )
-                    print(user)
                 except JSONDecodeError:
                     user = User.objects.update_or_create(
                         user_id=user_id.text.strip(),
@@ -120,7 +119,6 @@ class Crawler():
                 user = User.objects.update_or_create(
                     user_id=user_id.text.strip()
                 )
-                print(user)
             try:
                 self.driver.find_element_by_xpath('//*[@id="main"]/div/div/div[2]/div[101]/ul/li[2]/a')
             except NoSuchElementException:

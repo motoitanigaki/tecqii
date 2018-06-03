@@ -6,7 +6,11 @@
 
 {% load url_replace %}
 
-{% block head_title %}エンジニアランキング{% endblock %}
+{% block head_title %}{{ object.user_id }}{% endblock %}
+
+{% block extra_head_tags %}
+    <meta name="description" content="{{ object.description}}">
+{% endblock %}
 
 {% block body_class %}{% endblock %}
 

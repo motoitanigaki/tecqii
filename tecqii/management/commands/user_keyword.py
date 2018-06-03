@@ -59,7 +59,7 @@ class Command(BaseCommand):
                     for cmp_noun, value in data_collection.most_common():
                         cmp_noun = cmp_noun.replace(' ', '')
                         if len(cmp_noun) > 4:
-                            print(termextract.core.modify_agglutinative_lang(cmp_noun), value, sep="\t")
+                            # print(termextract.core.modify_agglutinative_lang(cmp_noun), value, sep="\t")
                             UserKeyword.objects.update_or_create(
                                 user=user,
                                 keyword=cmp_noun,
