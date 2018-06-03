@@ -19,5 +19,4 @@ class Command(BaseCommand):
                 user.contribution_count = sum
                 user.save()
                 updated_users_count += 1
-                print(sum, '\t', user)
         print('finished. updated user count: ', updated_users_count)

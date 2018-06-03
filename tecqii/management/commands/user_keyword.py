@@ -18,7 +18,7 @@ class Command(BaseCommand):
         for user in users:
             if not UserKeyword.objects.filter(user=user):
                 print('user： ',user,' -----------------')
-                items = Item.objects.filter(user=user)
+                items = Item.objects.filter(user=user).order_by('updated_at').reverse()[:19]
                 text = ''
                 for item in items:
                     # tell wheather Japanese or not for each character since termextract doesn't accept non Japanese.
@@ -27,8 +27,9 @@ class Command(BaseCommand):
                     for char in item.body:
                         if re.findall('[ぁ-んァ-ン一-龠ー]' , char):
                             text += char
-                        # else:
-                        #     text += '、' # still need to keep the splits in articles.
+                        else:
+                            text += '、' # still need to keep the splits in articles.
+                    text = re.sub(r"、+", "、", text)
 
                     words = []
                     words_parsed = mecab.parse(text)
@@ -43,8 +44,6 @@ class Command(BaseCommand):
                     text = '、'.join(words)
 
 
-                if len(text) > 300000: # if the text length is too long, process stops.
-                    text = re.sub(r"、+", "、", text)
                 print('文字列:', len(text))
 
                 try:
