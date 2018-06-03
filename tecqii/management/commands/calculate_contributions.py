@@ -14,6 +14,7 @@ class Command(BaseCommand):
         users = User.objects.all()
         for user in users:
             sum = user.item_set.all().aggregate(Sum('likes_count'))
-            user.contribution_count = sum
-            print(user,' ',user.contribution_count,' ',sum)
-            user.save()
+            if sum != None:
+                user.contribution_count = sum
+                user.save()
+                print(user, ' ', user.contribution_count, ' ', sum)
