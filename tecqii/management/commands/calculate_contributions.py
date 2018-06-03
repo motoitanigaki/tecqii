@@ -12,9 +12,12 @@ class Command(BaseCommand):
         print("running calculate_contributions batch ...")
 
         users = User.objects.all()
+        updated_users_count = 0
         for user in users:
-            sum = user.item_set.all().aggregate(Sum('likes_count'))
+            sum = user.item_set.all().aggregate(Sum('likes_count'))['likes_count__sum']
             if sum != None:
                 user.contribution_count = sum
                 user.save()
-                print(user, ' ', user.contribution_count, ' ', sum)
+                updated_users_count += 1
+                print(sum, '\t', user)
+        print('finished. updated user count: ', updated_users_count)

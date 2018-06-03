@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d83b0ff0-a97e-4bd4-a5e0-f16611d415fd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tecqii/management/commands/calculate_contributions.py" afterPath="$PROJECT_DIR$/tecqii/management/commands/calculate_contributions.py" />
     </list>
     <ignored path="tecqii.iws" />
@@ -139,18 +138,6 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="get_users.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/tecqii/management/commands/get_users.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="285">
-                  <caret line="19" column="43" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="43" />
-                  <folding>
-                    <element signature="e#17#27#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="get_items_date.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/tecqii/management/commands/get_items_date.py">
               <provider selected="true" editor-type-id="text-editor">
@@ -258,11 +245,21 @@
           <file leaf-file-name="calculate_contributions.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/tecqii/management/commands/calculate_contributions.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="285">
-                  <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+                <state relative-caret-position="330">
+                  <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
                   <folding>
                     <element signature="e#17#68#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="crawl_user_qiita.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/tecqii/management/commands/crawl_user_qiita.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="195">
+                  <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="26" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -1096,13 +1093,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tecqii/management/commands/crawl_user_qiita.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="14" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tecqii/management/commands/crawl_users_qiita_light.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
@@ -1287,10 +1277,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tecqii/management/commands/crawl_user_qiita.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tecqii/management/commands/calculate_contributions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state relative-caret-position="330">
+          <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
           <folding>
             <element signature="e#17#68#0" expanded="true" />
           </folding>
