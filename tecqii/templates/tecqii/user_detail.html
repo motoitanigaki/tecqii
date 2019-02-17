@@ -22,13 +22,11 @@
                 display: none;
             }
         }
-
         @media (max-width: 768px) {
             .pc {
                 display: none;
             }
         }
-
     </style>
 
     <div style="background-color: #fafafa">
@@ -96,8 +94,6 @@
         </div>
     </div>
 
-
-
     <script>
         new Chart(document.getElementById("bar-chart"), {
             type: 'bar',
@@ -114,11 +110,10 @@
             options: {
                 legend: {display: false},
                 title: {
-                    display: true,
+                    display: true
                 }
             }
         });
-
             var userKeywordsList = (("{{user_keywords|safe}}").replace(/&(l|g|quo)t;/g, function (a, b) {
             return {
                 l: '<',
@@ -126,10 +121,10 @@
                 quo: '"'
             }[b];
         }));
-        userKeywordsList = userKeywordsList.replace(/u'/g, '\'')
-        userKeywordsList = userKeywordsList.replace(/'/g, '\"')
+        userKeywordsList = userKeywordsList.replace(/u'/g, '\'');
+        userKeywordsList = userKeywordsList.replace(/'/g, '\"');
         userKeywords = JSON.parse(userKeywordsList);
-        console.log(userKeywords)
+        console.log(userKeywords);
         $('#keywords').jQCloud(userKeywords, {
              colors: ["#266cd8", "#29c272", "#6c9ce6", "#48d3e3"],
              autoResize: true

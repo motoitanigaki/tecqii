@@ -1,7 +1,6 @@
 import json
 from django.views.generic import ListView, DetailView
 from django.db.models import Q
-from django.core.serializers.json import DjangoJSONEncoder
 from tecqii.models import Tag, User, Item, UserTagRelation, UserKeyword
 
 class UserListView(ListView):
@@ -25,8 +24,6 @@ class UserListView(ListView):
         query = User.objects.all().order_by('contribution_count').reverse()
         if self.request.GET.get('tag'):
             user_tag_relation = UserTagRelation.objects.filter(tag__tag_id__in=self.request.GET.getlist('tag'))
-            # query = query.filter(usertagrelation__tag__tag_id__iregex=r'(' + '|'.join(self.request.GET.getlist('tag')) + ')')
-            # query = query.filter(tag__in=self.request.GET.getlist('tag'))
             query = query.filter(usertagrelation__tag__tag_id__iexact=self.request.GET.get('tag'))
 
         # filter by sns
@@ -73,14 +70,6 @@ class UserDetailView(DetailView):
             user_keywords_list.append(user_keywords_dict)
             context['user_keywords'] = user_keywords_list
 
-        # user_tag_relations_list = list()
-        # user_tag_relations = UserTagRelation.objects.filter(user=self.object)
-        # for user_tag_relation in user_tag_relations:
-        #     user_tag_relations_dict = dict()
-        #     user_tag_relations_dict["tag"] = user_tag_relation.tag.tag_id
-        #     user_tag_relations_dict["items_count"] = user_tag_relation.items_count
-        #     user_tag_relations_list.append(user_tag_relations_dict)
-        #     context['user_tag_relations'] = user_tag_relations_list
         user_tag_relations = UserTagRelation.objects.filter(user=self.object).order_by('items_count').reverse()[:19]
         user_tag_relation_labels = []
         user_tag_relation_tags = []

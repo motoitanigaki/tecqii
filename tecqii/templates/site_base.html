@@ -9,9 +9,6 @@
     <link href="https://mtitg.com/tecqii/site-media/css/app.css" rel="stylesheet" />
     <link href="https://mtitg.com/tecqii/site-media/css/bootstrap4-business-tycoon.min.css" rel="stylesheet" />
     <link href="https://mtitg.com/tecqii/site-media/css/jqcloud.min.css" rel="stylesheet" type="text/css">
-{#    <link href="{% static "css/app.css" %}" rel="stylesheet" />#}
-{#    <link href="{% static "css/bootstrap4-business-tycoon.min.css" %}" rel="stylesheet" />#}
-{#    <link href="{% static "css/jqcloud.min.css" %}" rel="stylesheet" type="text/css">#}
 {% endblock %}
 
 
@@ -22,7 +19,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
     <script src="https://mtitg.com/tecqii/site-media/js/jqcloud.min.js"></script>
-{#    <script src="{% static "js/jqcloud.min.js" %}"></script>#}
     <meta name="google-site-verification" content="vCYylZ5o6sl0XuvaLv8nfg39Faz3mAzjY81dmCelID4" />
     {% block extra_head %}{% endblock %}
 {% endblock %}
@@ -34,21 +30,6 @@
         <div class="container">
         {% block topbar %}
             {% block site_brand %}<a class="navbar-brand" href="{% url "home" %}">Qiita エンジニア検索・ランキング</a>{% endblock %}
-{#            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">#}
-{#                <span class="fa fa-bars"></span>#}
-{#            </button>#}
-
-{#            <div class="collapse navbar-collapse" id="navbarSupportedContent">#}
-{#                {% block nav %}#}
-{#                    <ul class="navbar-nav mr-auto">#}
-{#                        {% block nav_items %}{% comment %}#}
-{#                        <li class="nav-item"><a class="nav-link" href="#tab_one">One</a></li>#}
-{#                        <li class="nav-item"><a class="nav-link" href="#tab_two">Two</a></li>#}
-{#                        {% endcomment %}{% endblock %}#}
-{#                    </ul>#}
-{#                {% endblock %}#}
-{#                {% block account_bar %}{% include "_account_bar.html" %}{% endblock %}#}
-{#            </div>#}
         {% endblock %}
         </div>
     </div>
@@ -63,7 +44,6 @@
 
 {% block scripts %}
     <script src="https://mtitg.com/tecqii/site-media/js/site.js"></script>
-{#    <script src="{% static "js/site.js" %}"></script>#}
 {% endblock %}
 
 {% block extra_body_base %}
@@ -76,7 +56,6 @@
             dataLayer.push(arguments);
         }
         gtag('js', new Date());
-
         gtag('config', 'UA-120265858-1');
     </script>
     {% block extra_body %}{% endblock %}

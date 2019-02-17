@@ -9,7 +9,6 @@ from tecqii.views import UserListView, UserDetailView
 
 
 urlpatterns = [
-    # path("", TemplateView.as_view(template_name="homepage.html"), name="home"),
     path("", UserListView.as_view(), name="home"),
     path("admin/", admin.site.urls),
     path("account/", include("account.urls")),

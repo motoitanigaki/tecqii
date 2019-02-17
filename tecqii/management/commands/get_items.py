@@ -23,7 +23,6 @@ class Command(BaseCommand):
         for user in users:
             # skip if the items_count and the item_set.count() is the same.
             if user.items_count == user.item_set.count():
-                # continue
                 pass
             if counter == 1000:
                 print('1000 calls finished.')

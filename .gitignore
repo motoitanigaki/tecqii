@@ -5,3 +5,9 @@ site_media/
 static/dist/
 .DS_Store
 /secrets.json
+users_data.csv
+tecqii/settings_base.py
+tecqii/settings_local.py
+tecqii/settings_production.py
+crawl_users_qiita.json
+secrets.json

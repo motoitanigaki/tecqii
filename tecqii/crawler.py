@@ -1,15 +1,11 @@
-import os
 import sys
 import time
-import datetime
-import traceback
 import requests
 from urllib.error import URLError
 from json.decoder import JSONDecodeError
 from http.client import RemoteDisconnected
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException, NoSuchElementException
@@ -54,21 +50,8 @@ class Crawler():
             print('loading took too much time')
         else:
             user_ids = self.driver.find_elements_by_xpath('//*[@id="main"]/div/div/div[2]/div[*]/div/div/p[1]/a')
-            # time.sleep(10)
             for user_id in user_ids:
-                # user = User.objects.update_or_create(
-                #     user_id=user_id.text.strip(),
-                #     # defaults={
-                #     #     'items_count': hover_card_json['articles_count'],
-                #     #     'contribution_count': int(hover_card_json['contribution']),
-                #     #     'permanent_id': int(hover_card_json['id']),
-                #     #     'name': hover_card_json['name'],
-                #     #     'profile_image_url': hover_card_json['profile_image_url']
-                #     # }
-                # )
-                # print(user)
                 try:
-                    # time.sleep(0.5)
                     hover_card = requests.request('GET', QIITA_INTERNALAPI_HOVERCARD+user_id.text.strip()) # using internal api.
                     hover_card_json = hover_card.json()
                     user = User.objects.update_or_create(
@@ -102,7 +85,7 @@ class Crawler():
             else:
                 return True
 
-    # not call the internal api
+    # not calling the internal api
     def crawl_qiita_users_light(self, char='A', page=1):
         QIITA_USERS_URL = 'https://qiita.com/users'
         try:
@@ -114,7 +97,6 @@ class Crawler():
         else:
             time.sleep(1)
             user_ids = self.driver.find_elements_by_xpath('//*[@id="main"]/div/div/div[2]/div[*]/div/div/p[1]/a')
-            # time.sleep(10)
             for user_id in user_ids:
                 user = User.objects.update_or_create(
                     user_id=user_id.text.strip()
@@ -236,18 +218,3 @@ class Crawler():
                     'contribution_count': contribution_count,
                 }
             )
-
-            print('description: ',description)
-            print('facebook_id: ',facebook_id)
-            print('followees_count: ',followees_count)
-            print('followers_count: ',followers_count)
-            print('github_login_name: ',github_login_name)
-            print('items_count: ',items_count)
-            print('linkedin_id: ',linkedin_id)
-            print('location: ',location)
-            print('name: ',name)
-            print('organization: ',organization)
-            print('profile_image_url: ',profile_image_url)
-            print('twitter_screen_name: ',twitter_screen_name)
-            print('website_url: ',website_url)
-            print('contribution_count: ',contribution_count)

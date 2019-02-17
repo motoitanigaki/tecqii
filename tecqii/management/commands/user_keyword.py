@@ -59,7 +59,6 @@ class Command(BaseCommand):
                     for cmp_noun, value in data_collection.most_common():
                         cmp_noun = cmp_noun.replace(' ', '')
                         if len(cmp_noun) > 4:
-                            # print(termextract.core.modify_agglutinative_lang(cmp_noun), value, sep="\t")
                             UserKeyword.objects.update_or_create(
                                 user=user,
                                 keyword=cmp_noun,
@@ -75,37 +74,4 @@ class Command(BaseCommand):
                     continue
 
         print('finished. at: ', datetime.now())
-                    # frequency = termextract.japanese_plaintext.cmp_noun_dict(text)
-                    # LR = termextract.core.score_lr(frequency,
-                    #                                ignore_words=termextract.japanese_plaintext.IGNORE_WORDS,
-                    #                                lr_mode=1, average_rate=1
-                    #                                )
-                #     term_imp = termextract.core.term_importance(frequency, LR)
-                #     # 重要度が高い順に並べ替えて出力
-                #     data_collection = collections.Counter(term_imp)
-                #     counter = 0
-                #     for cmp_noun, value in data_collection.most_common():
-                #         cmp_noun = cmp_noun.replace(' ','')
-                #         if len(cmp_noun) > 4:
-                #             keywords.append([value, cmp_noun])
-                #             counter += 1
-                #             if counter > 50:
-                #                 break
-                #
-                # keyword_counter = 0
-                # keywords = sorted(keywords, reverse=True)
-                # for keyword in keywords:
-                #     print(keyword[1], keyword[0], sep="\t")
-                #     result, success = UserKeyword.objects.update_or_create(
-                #         user=user,
-                #         keyword=keyword[1],
-                #         defaults={
-                #             'weight': keyword[0]
-                #         }
-                #     )
-                #
-                #     if success == True:
-                #         keyword_counter += 1
-                #         if keyword_counter > 50:
-                #             break
 

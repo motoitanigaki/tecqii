@@ -51,9 +51,6 @@
                 <tbody>
                 {% for user in object_list %}
                     <tr>
-                        {#                        <td class="p-0">#}
-                        {#                            <img class="img-thumbnail border-0" style="width:56px;" src="{{ user.profile_image_url }}">#}
-                        {#                        </td>#}
                         <td>{{ forloop.counter0|add:page_obj.start_index }}</td>
                         <td><a href="{% url 'user-detail' user.id %}">{{ user.user_id }}</a></td>
                         <td>{{ user.name|default:"---" }}</td>
@@ -92,7 +89,7 @@
         </div>
     </div>
 
-        <!-- sarchModal -->
+        <!-- searchModal -->
     <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
          aria-hidden="true">
         <form method="GET" action="" id="searchform">

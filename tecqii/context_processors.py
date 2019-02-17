@@ -25,7 +25,6 @@ def settings(request):
 
         "pinax_notifications_installed": "pinax.notifications" in django_settings.INSTALLED_APPS,
         "pinax_stripe_installed": "pinax.stripe" in django_settings.INSTALLED_APPS,
-
         "pinax_apps": package_names(filter(pinax_apps_filter, django_settings.INSTALLED_APPS))
     }
 

@@ -25,8 +25,6 @@ class Command(BaseCommand):
         for char in index:
             has_next_page = True
             page = 1
-            # if char == 'G':
-            #     page = 16
 
             # find the character with which the process failed at the last time.
             if char == first_char:
