@@ -1,6 +1,6 @@
 import json
 from django.views.generic import ListView, DetailView
-from django.db.models import Q
+from django.db.models import Q, Prefetch
 from tecqii.models import Tag, User, Item, UserTagRelation, UserKeyword
 
 class UserListView(ListView):
@@ -21,9 +21,11 @@ class UserListView(ListView):
         return context
 
     def get_queryset(self):
-        query = User.objects.all().order_by('contribution_count').reverse()
+        query = User.objects.all().order_by('contribution_count').reverse().prefetch_related(
+            Prefetch('usertagrelation_set', queryset=UserTagRelation.objects.select_related('tag')))
+
         if self.request.GET.get('tag'):
-            user_tag_relation = UserTagRelation.objects.filter(tag__tag_id__in=self.request.GET.getlist('tag'))
+            # user_tag_relation = UserTagRelation.objects.filter(tag__tag_id__in=self.request.GET.getlist('tag'))
             query = query.filter(usertagrelation__tag__tag_id__iexact=self.request.GET.get('tag'))
 
         # filter by sns
@@ -70,7 +72,7 @@ class UserDetailView(DetailView):
             user_keywords_list.append(user_keywords_dict)
             context['user_keywords'] = user_keywords_list
 
-        user_tag_relations = UserTagRelation.objects.filter(user=self.object).order_by('items_count').reverse()[:19]
+        user_tag_relations = UserTagRelation.objects.select_related().filter(user=self.object).order_by('items_count').reverse()[:19]
         user_tag_relation_labels = []
         user_tag_relation_tags = []
         for user_tag_relation in user_tag_relations:
